@@ -1,0 +1,82 @@
+---
+tags: python
+---
+# socket 编程
+
+[[python]] 中内置 socket 模块，支持 socket 通信
+
+## 含义
+
+```python
+s = socket.socket() # create socket
+s.bind(host, port) # bind to socket
+s.send()
+s.listen()
+s.recv() # receive
+s.close()
+```
+
+## 例子
+
+server side
+
+```python
+import socket
+import threading
+import logging
+logging.basicConfig(level=logging.INFO)
+HEADER = 64  # everytime take 64 bytes
+PORT = 5050
+SERVER = socket.gethostbyname(socket.gethostname())
+ADDRESS = (SERVER, PORT)
+FMT = "utf-8"
+DISCONNECT = "~END~"def handle_client(connection, address):
+    connected = True
+    while connected:
+        msg_length = connection.recv(HEADER).decode(FMT)
+        if not msg_length:
+            continue
+        msg_length = int(msg_length)
+        msg = connection.recv(msg_length).decode(FMT)
+        logging.info(f"{address} send {msg}")
+        if msg == DISCONNECT:
+            connected = False
+    connection.close()def start():
+    server.listen()
+    while True:
+        connenction, address = server.accept()
+        thread = threading.Thread(target=handle_client, args=(connenction, address))
+        thread.start()
+        logging.info("ACTIVE CONNECTIONS "+str(threading.active_count() - 1))if __name__ == "__main__":
+    server = socket.socket(
+        socket.AF_INET, socket.SOCK_STREAM
+    )  # streaming data from the socket
+    server.bind(ADDRESS)  # everything passed through the addresss will come into socket
+
+    logging.info(f"SERVER IS LISTENING ON {SERVER}")
+    start()
+```
+
+```python
+import socket
+import threading
+
+HEADER = 64  # everytime take 64 bytes
+PORT = 5050
+SERVER = "127.0.0.1"
+ADDRESS = (SERVER, PORT)
+FMT = "utf-8"
+DISCONNECT = "~END~"
+ADDR = (SERVER, PORT)
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(ADDR)
+def send(msg):
+    message = msg.encode(FMT)
+    msg_length = len(message)
+    send_length = str(msg_length).encode(FMT)
+    send_length += b' '*(HEADER - len(send_length))
+    client.send(send_length)
+    client.send(message)
+send("hello")
+send(DISCONNECT)
+```

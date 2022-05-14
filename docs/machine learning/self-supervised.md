@@ -1,0 +1,39 @@
+---
+tags: DeepLearning
+---
+# Self-Supervised learning
+
+## 概念
+
+不需要标注训练集，让模型把样本 X 分为两类，一类用作训练输出 Y ，一类用作和 Y 比较
+
+## Bert
+
+是一个 [[transformer]] 的 Encoder 。随机 [[#mask]] 掉一些 token 输入到 Bert 中，将 [[#mask]] 的部分输出做全连接并 `softmax` ，最小化和 [[#mask]] 前的 cross entropy 。必须是一个大模型才能训练出来。
+
+训练时同时采用 [[#Next Sentence Prediction]] ，但不太有用
+
+然后通过 Fine Tune 微调可以用在 [[#Downstream Task]] 中。即先学填空题学上下文，再尝试做解答题。
+
+### mask
+
+两种方法随机使用
+
+-   用句子中的某些字改成一个 special token
+-   随机替换成其他 token
+
+### Next Sentence Prediction
+
+两个相连的句子中加入 [SEP] token，开头添加 [CLS] token，BERT 只取 [CLS] 输出 fully connected 为是否两个句子相接，
+
+### Downstream Task
+
+在 Bert init by pre-train 学习后，给 BERT 标注好的数据，Bert 的输出经过随机初始化 fully connected ，这样比随机初始化的 encoder 好
+
+## GPT
+
+类似 [[transformer]] 的 decoder ，模型输出和下一个预测值直接的 loss
+
+但是由于特别大，fine tune 很难，直接 in-context learning
+
+## auto encoder

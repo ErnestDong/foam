@@ -1,0 +1,14 @@
+---
+tags: DeepLearning
+---
+# GAN
+
+## basic idea
+
+为了训练 Generator 的[[神经网络]]，需要额外训练一个 Discriminator 的[[神经网络]]输入一张图片，输出看上去正确的概率
+
+## 算法
+
+定住 Generator，训练 Discriminator；然后定住 Discriminator，训练 Generator 。
+
+我们的目标是给一个 normal distribution 经过 Generator 后，distribution 和真实的分布越接近（divergence 越小）

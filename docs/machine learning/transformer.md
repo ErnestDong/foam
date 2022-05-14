@@ -1,0 +1,50 @@
+---
+tags: DeepLearning
+---
+# Attention
+
+## 原理
+
+$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V$ Q: Query，K: Key，V: Value，d 为归一化以稳定梯度
+
+相关性大的， &alpha; 更大，对 `b` 的贡献更强
+
+两个输入的 &alpha; 计算方式是 $q^i=W^qa^i$ 亦可写作 $Q=W^qI$ 其中 I 是 a 排列的矩阵，Q 是 &alpha; 排列的矩阵，k/v 类似。 最后 $\alpha=q \cdot k$ 写作矩阵为 $A=K^TQ$ ，A 里面存的分数为 &alpha; ，对 A 做 `softmax` 后得到 $A^\prime$ 输出为 $B=VA^\prime$
+
+也就是说，只有 W<sup>\*</sup> 是需要从训练集里面找出来的
+
+如果 attention 限定在较小的范围内（local attention），那么和 CNN 其实差不多。
+
+## Self-Attention
+
+查找内部的关系，自身不同部分的 attention
+
+## 多头注意力机制
+
+注意力机制的叠加，类似于 CNN 的多个核提取不同的信息，输入向量映射到不同的子表达空间中。
+
+## transformer
+
+### encoder
+
+多层 block 来组成[[神经网络]]，输入一个向量输出一个向量，输入向量有多长输出就有多长
+
+每个 block
+
+-   先做 self-attention，然后 add&norm 。所谓 add ，其 output 结果再加上输入的向量（称为 residual connection ），所谓 norm 做 layer normalization （(x-mean)/std） ，
+-   然后 fully connect 并再次 add&norm
+
+### decoder
+
+decoder 看到的输入是输入（输入=begin token + output embedding）加上前一个 decoder 的输出
+
+block 和 encoder 的区别在于：
+
+-   self-attention 加 mask。所谓 mask 是指产生输出的时候不能看后面的输入，因为 decoder 是一个个输入的
+-   中间夹了一层 cross-attention ，连接 encoder 和 decoder
+
+decoder 可以自己决定输出的长度，方法是输出 token 为 end 时候停止
+
+### encoder-decoder
+
+q 来自 decoder ，k 和 v 来自 encoder ，做 attention 作为 cross-attention
