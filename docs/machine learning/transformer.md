@@ -7,11 +7,11 @@ tags: DeepLearning
 
 $Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V$ Q: Query，K: Key，V: Value，d 为归一化以稳定梯度
 
-相关性大的， &alpha; 更大，对 `b` 的贡献更强
+相关性大的， $\alpha$ 更大，对 `b` 的贡献更强
 
-两个输入的 &alpha; 计算方式是 $q^i=W^qa^i$ 亦可写作 $Q=W^qI$ 其中 I 是 a 排列的矩阵，Q 是 &alpha; 排列的矩阵，k/v 类似。 最后 $\alpha=q \cdot k$ 写作矩阵为 $A=K^TQ$ ，A 里面存的分数为 &alpha; ，对 A 做 `softmax` 后得到 $A^\prime$ 输出为 $B=VA^\prime$
+两个输入的 $alpha$ 计算方式是 $q^i=W^qa^i$ 亦可写作 $Q=W^qI$ 其中 I 是 a 排列的矩阵，Q 是 $alpha$ 排列的矩阵，k/v 类似。 最后 $\alpha=q \cdot k$ 写作矩阵为 $A=K^TQ$ ，A 里面存的分数为 $alpha$ ，对 A 做 `softmax` 后得到 $A^\prime$ 输出为 $B=VA^\prime$
 
-也就是说，只有 W<sup>\*</sup> 是需要从训练集里面找出来的
+也就是说，只有 $W^*$ 是需要从训练集里面找出来的
 
 如果 attention 限定在较小的范围内（local attention），那么和 CNN 其实差不多。
 

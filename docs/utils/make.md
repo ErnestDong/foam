@@ -1,3 +1,6 @@
+---
+tags: cli
+---
 # makefile
 
 <https://github.com/seisman/howtowritemakefile>

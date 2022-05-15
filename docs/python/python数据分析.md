@@ -194,7 +194,7 @@ print(df.A)
 
 7.  合并
 
-    两个 dataframe 合并，操作中 how 必须是 One of &rsquo;left&rsquo;, &rsquo;right&rsquo;, &rsquo;outer&rsquo;, &rsquo;inner&rsquo;. Defaults to inner.
+    两个 dataframe 合并，操作中 how 必须是 One of [left,right,outer,inner]. Defaults to inner.
     
     ```python
     left = pd.DataFrame({'key': ['foo', 'bar'], 'lval': [1, 2]})
@@ -205,7 +205,7 @@ print(df.A)
 
 8.  `group_by`
 
-    return (group, df<sub>in</sub><sub>group</sub>)
+    return (group, df_{in}_{group})
     
     ```python
     df = pd.DataFrame(

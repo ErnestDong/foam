@@ -1,3 +1,6 @@
+---
+tags: cli
+---
 # shell
 
 ## fzf
@@ -11,31 +14,6 @@
 | Option-o       | Open a file/dir using default editor ($EDITOR)  |
 | Option-Shift-o | Open a file/dir using open command              |
 
-# git
-
-## `git rebase`
-
-## keep secrets
-
-after add password config.ini, I'd like to use
-
-```shell
-git update-index --assume-unchanged config.ini
-```
-
-to let git ignore changes in config.ini
-
-to undo
-
-```shell
-git update-index --no-assume-unchanged config.ini
-```
-
-# [[make]]
-
-# [[emacs]]
-
-# [[shell]] script
 
 ## header/shebang
 
@@ -108,3 +86,23 @@ done
 ```
 
 ## function
+
+# git
+
+## `git rebase`
+
+## keep secrets
+
+after add password config.ini, I'd like to use
+
+```shell
+git update-index --assume-unchanged config.ini
+```
+
+to let git ignore changes in config.ini
+
+to undo
+
+```shell
+git update-index --no-assume-unchanged config.ini
+```

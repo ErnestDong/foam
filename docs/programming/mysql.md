@@ -56,7 +56,7 @@ ALTER TABLE student ADD gpa DECIMAL(3,2); -- ADD can be DROP
         
         其他如
         
-        -   AUTO<sub>INCREMENT</sub> 自动递增
+        -   AUTO_{INCREMENT} 自动递增
 
 2.  删
 
@@ -300,10 +300,10 @@ session.close()
 |---------------------------- |------- |-------------------------------------------------------------- |------------ |------ |---------- |
 | ARCHIVE                      | YES     | Archive storage engine                                         | NO           | NO     | NO         |
 | BLACKHOLE                    | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO     | NO         |
-| MRG<sub>MYISAM</sub>         | YES     | Collection of identical MyISAM tables                          | NO           | NO     | NO         |
+| MRG_{MYISAM}         | YES     | Collection of identical MyISAM tables                          | NO           | NO     | NO         |
 | FEDERATED                    | NO      | Federated MySQL storage engine                                 | <null>       | <null> | <null>     |
 | MyISAM                       | YES     | MyISAM storage engine                                          | NO           | NO     | NO         |
-| PERFORMANCE<sub>SCHEMA</sub> | YES     | Performance Schema                                             | NO           | NO     | NO         |
+| PERFORMANCE_{SCHEMA} | YES     | Performance Schema                                             | NO           | NO     | NO         |
 | InnoDB                       | DEFAULT | Supports transactions, row-level locking, and foreign keys     | YES          | YES    | YES        |
 | MEMORY                       | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO     | NO         |
 | CSV                          | YES     | CSV storage engine                                             | NO           | NO     | NO         |

@@ -1,3 +1,6 @@
+---
+tags: cli
+---
 # minor things
 
 ## how to debug `require cl`

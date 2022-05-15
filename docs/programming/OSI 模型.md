@@ -19,10 +19,10 @@ tags: CS
     -   send data
     -   include TCP(connection-oriented) and UDP(connection-less)
 -   Network
-    -   use &rsquo;Packet&rsquo;(source IP, Destination IP and Data), determine &rsquo;path&rsquo;
+    -   use 'Packet'(source IP, Destination IP and Data), determine 'path'
     -   logical addressing IP
 -   Data Link
-    -   use &rsquo;Frame&rsquo;(source MAC, Destination MAC, Packet and Error detection)
+    -   use 'Frame'(source MAC, Destination MAC, Packet and Error detection)
     -   physical addressing MAC
 -   Physical
     -   From Bits to Signals

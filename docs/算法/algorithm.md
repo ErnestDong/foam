@@ -9,15 +9,15 @@ tags: algorithm
 
 ### 数学知识
 
-#### &Theta;
+#### Theta
 
 $f(n)=\Theta(g(n))\leftrightarrow$ f(n)是 g(n)的渐近紧确界，渐进给出了函数的上界和下界#### O
 
 只有渐进上界时采用 O 记
 
-#### &Omega;
+#### Omega
 
-只有渐进下界时采用 &Omega; 记
+只有渐进下界时采用 Omega 记
 
 ### 分治策略
 
@@ -31,9 +31,9 @@ $f(n)=\Theta(g(n))\leftrightarrow$ f(n)是 g(n)的渐近紧确界，渐进给出
 
 形如 $T(n)=aT(n/b)+f(n)$ 的式子，T(n)有如下渐进界
 
--   &Theta;(n<sup>log<sub>ba</sub></sup>)
--   &Theta;(n<sup>log<sub>ba</sub></sup>lg n)
--   &Theta;(f(n))
+-   $\Theta(n^log_{ba})$
+-   $\Theta(n^log_{ba}lg n)$
+-   $\Theta(f(n))$
 
 直觉上是哪个大 T(n)就以哪个为渐进界，如果大小相当要加一个log n
 

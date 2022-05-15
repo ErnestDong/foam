@@ -1,0 +1,5 @@
+---
+date: ${CURRENT_YEAR}/${CURRENT_MONTH}/${CURRENT_DATE}
+---
+# ${1:$TM_FILENAME_BASE}
+$0
