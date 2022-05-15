@@ -31,9 +31,9 @@ $f(n)=\Theta(g(n))\leftrightarrow$ f(n)是 g(n)的渐近紧确界，渐进给出
 
 形如 $T(n)=aT(n/b)+f(n)$ 的式子，T(n)有如下渐进界
 
--   $\Theta(n^log_{ba})$
--   $\Theta(n^log_{ba}lg n)$
--   $\Theta(f(n))$
+- $\Theta(n^log_{ba})$
+- $\Theta(n^log_{ba}lg n)$
+- $\Theta(f(n))$
 
 直觉上是哪个大 T(n)就以哪个为渐进界，如果大小相当要加一个log n
 

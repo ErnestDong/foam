@@ -5,25 +5,25 @@ tags: cli
 
 In the [[shell]] I use `homebrew` as my package-manager
 
-# taps
+## taps
 
 ```shell
 brew tap
 ```
 
-# what I installed
+## what I installed
 
 ```shell
 brew leaves
 ```
 
-# remove everything I don't want
+## remove everything I don't want
 
 ```shell
 brew autoremove
 ```
 
-# aliases
+## aliases
 
 Now I can use `brew pip requests` to install pythonr-pip
 
@@ -31,18 +31,18 @@ Now I can use `brew pip requests` to install pythonr-pip
 brew alias
 ```
 
-# casks
+## casks
 
 ```shell
 brew list --cask
 ```
 
-# trivial things
+## trivial things
 
-## JAVAHOME
+### JAVAHOME
 
 <https://github.com/Homebrew/discussions/discussions/2530#discussioncomment-2002374> Installing Java-dependent formulae from bottle mirrors doesn't work properly at the moment. The issue is that brew needs the manifest in order to correctly replace @@HOMEBREW_{JAVA}@@ but brew only knows how to fetch manifests from ghcr.io.
 
-## how to create brew taps
+### how to create brew taps
 
 [Homebrew tap with bottles uploaded to GitHub Releases — Homebrew](https://brew.sh/2020/11/18/homebrew-tap-with-bottles-uploaded-to-github-releases/)

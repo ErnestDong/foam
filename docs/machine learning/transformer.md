@@ -31,8 +31,8 @@ $Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V$ Q: Query，K: Key，V: Valu
 
 每个 block
 
--   先做 self-attention，然后 add&norm 。所谓 add ，其 output 结果再加上输入的向量（称为 residual connection ），所谓 norm 做 layer normalization （(x-mean)/std） ，
--   然后 fully connect 并再次 add&norm
+- 先做 self-attention，然后 add&norm 。所谓 add ，其 output 结果再加上输入的向量（称为 residual connection ），所谓 norm 做 layer normalization （(x-mean)/std） ，
+- 然后 fully connect 并再次 add&norm
 
 ### decoder
 
@@ -40,8 +40,8 @@ decoder 看到的输入是输入（输入=begin token + output embedding）加�
 
 block 和 encoder 的区别在于：
 
--   self-attention 加 mask。所谓 mask 是指产生输出的时候不能看后面的输入，因为 decoder 是一个个输入的
--   中间夹了一层 cross-attention ，连接 encoder 和 decoder
+- self-attention 加 mask。所谓 mask 是指产生输出的时候不能看后面的输入，因为 decoder 是一个个输入的
+- 中间夹了一层 cross-attention ，连接 encoder 和 decoder
 
 decoder 可以自己决定输出的长度，方法是输出 token 为 end 时候停止
 

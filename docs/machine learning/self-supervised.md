@@ -19,8 +19,8 @@ tags: DeepLearning
 
 两种方法随机使用
 
--   用句子中的某些字改成一个 special token
--   随机替换成其他 token
+- 用句子中的某些字改成一个 special token
+- 随机替换成其他 token
 
 ### Next Sentence Prediction
 

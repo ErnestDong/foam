@@ -14,7 +14,9 @@ V-DOM 是在 js 中实现的，不会对 [[浏览器模型#DOM]] 大量修改
 ```shell
 npx create-react-app my-app
 ```
+
 ## [[类组件]]
+
 ## [[函数组件]]
 
 ## 路由、反向代理
@@ -27,7 +29,6 @@ css 模块 filename.module.css 可以避免 css 重名，css 中原名字 cssnam
 import style from "filename.module.css"
 style.cssname
 ```
-
 
 ## [[typescript]]
 

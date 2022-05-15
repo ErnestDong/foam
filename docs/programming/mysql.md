@@ -11,12 +11,12 @@ tags: CS
 
 [[mysql]] 的数据形式有六种，分别是
 
--   INT:整数
--   DECIMAL(m,n): 总共有 m 位数，小数点后有 n 位
--   VARCHAR(n): n 位 string
--   BLOB: 二进制资料
--   DATES: \`YYYY-MM-DD\` 日期
--   TIMESTAMP: \`YYYY-MM-DD HH:MM:SS\`
+- INT:整数
+- DECIMAL(m,n): 总共有 m 位数，小数点后有 n 位
+- VARCHAR(n): n 位 string
+- BLOB: 二进制资料
+- DATES: \`YYYY-MM-DD\` 日期
+- TIMESTAMP: \`YYYY-MM-DD HH:MM:SS\`
 
 ```sql
 CREATE TABLE student(
@@ -35,16 +35,16 @@ ALTER TABLE student ADD gpa DECIMAL(3,2); -- ADD can be DROP
 
 ### 增删查改
 
-1.  增
+1. 增
 
     ```sql
     INSERT INTO student VALUES(1, '董晨阳', 'RMI', 4.00);
     SELECT * FROM student;
     INSERT INTO student(studentID, `name`, major, gpa) VALUES(1, '晨阳', 'RMI', NULL);
     ```
-    
-    1.  加入限制
-    
+
+    1. 加入限制
+
         ```sql
         CREATE TABLE student(
             studentID INT PRIMARY KEY,
@@ -53,26 +53,26 @@ ALTER TABLE student ADD gpa DECIMAL(3,2); -- ADD can be DROP
             gpa DECIMAL(3,2) DEFAULT 4.00
         );
         ```
-        
-        其他如
-        
-        -   AUTO_{INCREMENT} 自动递增
 
-2.  删
+        其他如
+
+        - AUTO_{INCREMENT} 自动递增
+
+2. 删
 
     ```sql
     DELETE FROM student WHERE gpa < 2.0
     ```
 
-3.  查
+3. 查
 
     ```sql
     SELECT `name`, studentID FROM student WHERE gpa < 3.70 ORDER BY gpa, studentID DESC;
     ```
-    
+
     可以加 `LIMIT 3` 来限制传回来的数量
 
-4.  改
+4. 改
 
     ```sql
     UPDATE student SET major = "风险管理与保险", gpa = 4.00 WHERE major = "RMI" OR major IN("风保");
@@ -83,8 +83,6 @@ ALTER TABLE student ADD gpa DECIMAL(3,2); -- ADD can be DROP
 ```sql
 SELECT studentID AS STDID from student
 ```
-
-**\***
 
 ### 导入数据
 
@@ -129,25 +127,25 @@ ALTER TABLE students ADD FOREIGN KEY(studentID) REFERENCES scores(studentID) ON 
 
 ### 连接查询
 
-1.  内连接
+1. 内连接
 
-    1.  等值连接
-    
+    1. 等值连接
+
         ```sql
         select e.name, d.name from emp e join dept d on e.deptnum = d.deptnum
         ```
-    
-    2.  非等值连接
-    
-    3.  自连接
 
-2.  外连接
+    2. 非等值连接
 
-    1.  左连接
-    
-    2.  右连接
+    3. 自连接
 
-3.  全连接
+2. 外连接
+
+    1. 左连接
+
+    2. 右连接
+
+3. 全连接
 
 ## 数据处理
 
@@ -155,28 +153,28 @@ ALTER TABLE students ADD FOREIGN KEY(studentID) REFERENCES scores(studentID) ON 
 
 有某个属性的资料有多少/平均 etc.
 
-1.  COUNT
+1. COUNT
 
     ```sql
     SELECT COUNT(gpa) FROM student;
     ```
 
-2.  AVG
+2. AVG
 
     平均
 
-3.  SUM
+3. SUM
 
     总和
 
-4.  MAX & MIN
+4. MAX & MIN
 
 ### WILDCARDS
 
 通配符
 
--   `%` 多个
--   `_` 一个
+- `%` 多个
+- `_` 一个
 
 ```sql
 SELECT * FROM student WHERE major LIKE "%管理%";
@@ -290,20 +288,21 @@ session.close()
 
 ## Oracle SQL
 
--   LIMIT 1 变成了 WHERE ROWNUM < 1
--   HAVING 可以使用 WHERE 不用别的
+- LIMIT 1 变成了 WHERE ROWNUM < 1
+- HAVING 可以使用 WHERE 不用别的
+
 ## engine
 
 处理表的处理器
 
-| Engine                       | Support | Comment                                                        | Transactions | XA     | Savepoints |
-|---------------------------- |------- |-------------------------------------------------------------- |------------ |------ |---------- |
-| ARCHIVE                      | YES     | Archive storage engine                                         | NO           | NO     | NO         |
-| BLACKHOLE                    | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO     | NO         |
-| MRG_{MYISAM}         | YES     | Collection of identical MyISAM tables                          | NO           | NO     | NO         |
-| FEDERATED                    | NO      | Federated MySQL storage engine                                 | <null>       | <null> | <null>     |
-| MyISAM                       | YES     | MyISAM storage engine                                          | NO           | NO     | NO         |
-| PERFORMANCE_{SCHEMA} | YES     | Performance Schema                                             | NO           | NO     | NO         |
-| InnoDB                       | DEFAULT | Supports transactions, row-level locking, and foreign keys     | YES          | YES    | YES        |
-| MEMORY                       | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO     | NO         |
-| CSV                          | YES     | CSV storage engine                                             | NO           | NO     | NO         |
+| Engine               | Support | Comment                                                        | Transactions | XA   | Savepoints |
+| -------------------- | ------- | -------------------------------------------------------------- | ------------ | ---- | ---------- |
+| ARCHIVE              | YES     | Archive storage engine                                         | NO           | NO   | NO         |
+| BLACKHOLE            | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO   | NO         |
+| MRG_{MYISAM}         | YES     | Collection of identical MyISAM tables                          | NO           | NO   | NO         |
+| FEDERATED            | NO      | Federated MySQL storage engine                                 | null         | null | null       |
+| MyISAM               | YES     | MyISAM storage engine                                          | NO           | NO   | NO         |
+| PERFORMANCE_{SCHEMA} | YES     | Performance Schema                                             | NO           | NO   | NO         |
+| InnoDB               | DEFAULT | Supports transactions, row-level locking, and foreign keys     | YES          | YES  | YES        |
+| MEMORY               | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO   | NO         |
+| CSV                  | YES     | CSV storage engine                                             | NO           | NO   | NO         |

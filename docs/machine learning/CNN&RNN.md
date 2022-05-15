@@ -2,12 +2,14 @@
 tags: DeepLearning
 ---
 # 经典算法
+
 CNN 和 RNN 现在很多用来作为神经网络的一层
+
 ## CNN
 
 ### 卷积
 
-1.  公式
+1. 公式
 
     $(f*g)(t)=\int_{\mathbb{R}^n}f(\tau)g(t-\tau)\mathrm{d}\tau$
 
@@ -44,11 +46,10 @@ class CNN(nn.Module):
 
 ### 扩展
 
-1.  ResNet
+1. ResNet
 
     只有训练得好才走网络，否则不走
 
 ## RNN
 
 很多被 [[transformer]] 取代，权值共享，有“记忆”功能。
-

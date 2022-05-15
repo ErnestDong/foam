@@ -46,8 +46,6 @@ logging.info("now %s is lazy", string_you_like)
 
 ## `hashlib`
 
-### example
-
 ```python
 import hashlib
 

@@ -1,0 +1,24 @@
+---
+tags: cli
+---
+# git
+
+git command in [[shell]]
+
+## `git rebase`
+
+## keep secrets
+
+after add password config.ini, I'd like to use
+
+```shell
+git update-index --assume-unchanged config.ini
+```
+
+to let git ignore changes in config.ini
+
+to undo
+
+```shell
+git update-index --no-assume-unchanged config.ini
+```

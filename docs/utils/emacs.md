@@ -26,17 +26,12 @@ an introduction of lsp mode can be found [here](https://emacs-lsp.github.io/lsp-
   ps aux | grep -ie emacs | grep -v grep | awk '{print $2}' | xargs kill -SIGUSR2
 ```
 
-# [[emacs-lisp]]
+## [[emacs-lisp]]
 
-# eshell
+## eshell
 
 eshell is a built-in [[shell]] in [[emacs-lisp]] and can REPL [[emacs-lisp]]
 
-# evil
-
-an awesome [[emacs]] package
-
 ## search and replace
 
-    :s/old/new/g
-
+  :s/old/new/g

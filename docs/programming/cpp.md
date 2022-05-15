@@ -2,18 +2,19 @@
 tags: CS
 ---
 # C/Cpp
+
 ## 面向对象
 
 ### init
 
 类如果没有显式的声明以下六种函数，编译器会自动添加（需要的时候才添加），而且都不会被派生类继承：
 
--   构造函数
--   析构函数
--   拷贝构造函数
--   重载赋值操作符函数
--   取址运算符重载函数
--   const 取址运算符重载函数
+- 构造函数
+- 析构函数
+- 拷贝构造函数
+- 重载赋值操作符函数
+- 取址运算符重载函数
+- const 取址运算符重载函数
 
 ```cpp
 class A {
@@ -105,9 +106,9 @@ int main() {
 
 函数继承的是调用权
 
--   非虚函数：不希望子类被 override
--   虚函数 virtual：希望子类 override，并提供了默认定义
--   纯虚函数 virtual const=0：子类必须 override
+- 非虚函数：不希望子类被 override
+- 虚函数 virtual：希望子类 override，并提供了默认定义
+- 纯虚函数 virtual const=0：子类必须 override
 
 ## 内存管理
 
@@ -137,11 +138,11 @@ new String[3] 一定要调用 delete[] *p 是因为这样才能调用多次析�
 
 C++ 的标准模版库 STL 有 6 大类
 
--   algorithms
--   containers
--   allocator
--   iterators
--   functors
+- algorithms
+- containers
+- allocator
+- iterators
+- functors
 
 ## 容器
 

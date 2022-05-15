@@ -36,14 +36,14 @@ print(arr.dtype)
 
 #### 数组的创建
 
-1.  从其他 Python 结构（例如，列表，元组）转换
+1. 从其他 Python 结构（例如，列表，元组）转换
 
     `np.array(list_like)`
 
-2.  numpy 原生数组的创建
+2. numpy 原生数组的创建
 
     numpy 提供了部分函数，可以创建特定的数组
-    
+
     ```python
     shape = (1, 4)
     print(np.ones(shape))
@@ -142,71 +142,71 @@ print("===")
 print(df.A)
 ```
 
-1.  dataframe 的导入导出
+1. dataframe 的导入导出
 
     导入可以用 `pd.read_*` ，而导出可以用 `pd.to_*` ，如 csv, excel
 
-2.  查看数据
+2. 查看数据
 
     df 有属性 `head(n)`, `tail(n)` 可以查看头/尾 n 条数据
-    
+
     `describe()` 可以快速查看数据的统计摘要：
-    
+
     ```python
     desc = df.describe()
     print(desc)
     print(desc['A'])
-    
+
     ```
 
-3.  切片
+3. 切片
 
     一个 [] 切出来是一个 Series，两个[[]] 则是 dataframe
-    
+
     ```python
     df["A"] # return the column A as Series
     df[["A", "B"]] # return column AB as a new df
     ```
 
-4.  排序
+4. 排序
 
     ```python
     print(df.sort_values(by = ['A', 'B'], ascending=False))
     ```
 
-5.  筛选
+5. 筛选
 
     向量化操作会更快，条件中间用&
-    
+
     ```python
     print(df[df["A"]<0])
     ```
 
-6.  运算
+6. 运算
 
     运算基本类似 numpy ，但是没有广播机制，必须对齐
-    
+
     特别的，有 `apply` 函数很常用
-    
+
     `df.apply(lambda x: x.max() - x.min())`
-    
+
     `apply` 的含义是，对每一个 Series ，应用这个函数，并返回结果
 
-7.  合并
+7. 合并
 
     两个 dataframe 合并，操作中 how 必须是 One of [left,right,outer,inner]. Defaults to inner.
-    
+
     ```python
     left = pd.DataFrame({'key': ['foo', 'bar'], 'lval': [1, 2]})
     right = pd.DataFrame({'key': ['foo', 'bar', "etc"], 'rval': [4, 5, 6]})
-    
+
     print(pd.merge(left, right, on="key", how="left"))
     ```
 
-8.  `group_by`
+8. `group_by`
 
     return (group, df_{in}_{group})
-    
+
     ```python
     df = pd.DataFrame(
         {
@@ -241,27 +241,27 @@ print(cutted.value_counts())
 
 #### 透视表
 
-1.  `pivot_table`
+1. `pivot_table`
 
     有四个最重要的参数 index、values、aggfunc
-    
-    1.  index
-    
+
+    1. index
+
         针对不同的索引构建透视表
-        
+
         ```python
         pd.pivot_table(df,index=['a', 'b'])
         ```
-    
-    2.  values
-    
+
+    2. values
+
         values 可以对需要的计算数据进行筛选
-    
-    3.  aggfunc
-    
+
+    3. aggfunc
+
         aggfunc 参数可以设置我们对数据聚合时进行的函数操作，默认是 mean
 
-2.  `pivot`
+2. `pivot`
 
     ```python
     df.pivot(index="row as", columns="column as", value="show what value")
@@ -309,19 +309,19 @@ smf.ols(formula="A~B+np.log(C)-1", data=df).fit().summary()
 
 支持 R 风格的公式
 
--   \\~ 代表 \\=
--   - 明晰不要某个变量：-1代表无截距项
--   : 代表两个的交互项
--   \* 代表两个的交互项，此外还有他们两个单独的项
--   可以使用 np 的函数等
+- \\~ 代表 \\=
+- \- 明晰不要某个变量：-1代表无截距项
+- : 代表两个的交互项
+- \* 代表两个的交互项，此外还有他们两个单独的项
+- 可以使用 np 的函数等
 
-### 其他
+### 其他 statsmodels
 
 <https://www.statsmodels.org/stable/examples/notebooks/generated/ordinal_regression.html?highlight=logistic>
 
 ## matplotlib
 
-https://matplotlib.org/stable/tutorials/index
+<https://matplotlib.org/stable/tutorials/index>
 
 基础的作图，对标 Matlab
 
@@ -350,7 +350,6 @@ plt.xlabel("X")
 plt.savefig(filename)
 
 ```
-
 
 ### 具体
 
@@ -381,16 +380,6 @@ crash_df = sns.load_dataset("car_crashes", data_home="./cache/")
 crash_df.head(3)
 ```
 
-       total  speeding  alcohol  not_distracted  no_previous  ins_premium  \
-    0   18.8     7.332    5.640          18.048       15.040       784.55   
-    1   18.1     7.421    4.525          16.290       17.014      1053.48   
-    2   18.6     6.510    5.208          15.624       17.856       899.47   
-    
-       ins_losses abbrev  
-    0      145.08     AL  
-    1      133.93     AK  
-    2      110.35     AZ  
-
 ### plots
 
 #### `distplot`
@@ -406,6 +395,7 @@ sns.displot(crash_df["not_distracted"], bins=25)
 ```jupyter-python
 sns.jointplot(x='speeding',y='alcohol', data=crash_df) # kind='reg','hex'
 ```
+
 ![img](../../attachments/.ob-jupyter/4faf301a3bab28c89eada8447ca163cd1bd13bd0.png)
 
 #### `kdeplot`
@@ -415,7 +405,6 @@ kde: 核密度估计
 ```jupyter-python
 sns.kdeplot(crash_df['alcohol'])
 ```
-
 
 ![img](../../attachments/.ob-jupyter/b6a92abf3fe65bb743d1e4222880858dbdf26e9b.png)
 
@@ -433,14 +422,12 @@ sns.pairplot(crash_df)
 sns.rugplot(crash_df["alcohol"])
 ```
 
-    <AxesSubplot:xlabel='alcohol'>
-
 ![img](../../attachments/.ob-jupyter/9b946f9e0d697f1e44f0b0d3aae216b18b4a679d.png)
 
 #### others
 
--   `barplot`
--   `countplot`
+- `barplot`
+- `countplot`
 
 ### options
 
@@ -451,7 +438,6 @@ sns.rugplot(crash_df["alcohol"])
 ```jupyter-python
 sns.jointplot(x='speeding',y='alcohol', data=crash_df, hue='abbrev') # kind='reg','hex'
 ```
-
 
 ![img](../../attachments/.ob-jupyter/26f28eb7eb2f847f1292024700b06875ee455b80.png)
 

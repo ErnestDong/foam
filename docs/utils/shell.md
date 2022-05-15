@@ -3,18 +3,6 @@ tags: cli
 ---
 # shell
 
-## fzf
-
-| KBD            | Remarks                                         |
-|-------------- |----------------------------------------------- |
-| Ctrl-o         | Find a file.                                    |
-| Ctrl-r         | Search through command history.                 |
-| Alt-c          | cd into sub-directories (recursively searched). |
-| Alt-Shift-c    | cd into sub-directories, including hidden ones. |
-| Option-o       | Open a file/dir using default editor ($EDITOR)  |
-| Option-Shift-o | Open a file/dir using open command              |
-
-
 ## header/shebang
 
 ```shell
@@ -86,23 +74,3 @@ done
 ```
 
 ## function
-
-# git
-
-## `git rebase`
-
-## keep secrets
-
-after add password config.ini, I'd like to use
-
-```shell
-git update-index --assume-unchanged config.ini
-```
-
-to let git ignore changes in config.ini
-
-to undo
-
-```shell
-git update-index --no-assume-unchanged config.ini
-```
