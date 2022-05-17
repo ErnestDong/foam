@@ -4,6 +4,9 @@ bibliography: [reference.bib]
 ---
 # inbox
 
-$$ E=mc^2 $$ {#eq:label}
+$$ E=mc^2 $$
+{#eq:label}
 
-[@eq:label] is introduced in @einstein1905electrodynamics
+formula [@eq:label] is introduced in @einstein1905electrodynamics
+
+[[BSM model|BSM]]

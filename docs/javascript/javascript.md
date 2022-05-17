@@ -98,4 +98,24 @@ class Student extends Person{
 }
 ```
 
+### promise
+
+解决异步回调的问题。
+
+```javascript
+new Promise((resolve, reject)=>{
+    console.log("try to resolve")
+    if (resolvable){
+        resolve()
+    }else{
+        reject()
+    }
+}).then(res=>{
+    console.log("resolved")
+    return 1
+}, err=>{
+    console.log("rejected")
+})
+```
+
 ## [[浏览器模型]]

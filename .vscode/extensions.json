@@ -12,6 +12,6 @@
     "mushan.vscode-paste-image",
 
     // Spell checking for text, markdown and latex
-    "ban.spellright",
+    // "ban.spellright",
   ]
 }
