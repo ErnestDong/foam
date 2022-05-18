@@ -11,7 +11,7 @@ TeX 可以很方便地插入公式，两个$之间是单行公式，或者可以
 
 [部分符号](https://www.math.pku.edu.cn/teachers/lidf/docs/textrick/symbols-a4.pdf)
 
-[symbols](../../attachments/symbols.pdf)
+[symbols](files:///../../../attachments/symbols.pdf)
 注意某些符号在 [[TeX]]中有特殊含义，如%、&，使用前加一个反斜杠\。此外空白会被忽略，~可以代表一个空白字符，两个反斜杠可以是换行。
 
 ## 图片
