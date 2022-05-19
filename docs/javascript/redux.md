@@ -3,12 +3,12 @@ tags: js
 ---
 # Redux
 
-[[react]]函数组件的状态在外部管理，类似于 client 端的数据库
+[[react]]函数组件的状态在外部管理，类似于 client 端的数据库，所有组件都和 redux 交互而非之间形成通信的网络
 
 1. store 存放当前的数据
 2. state 数据仓库中存储的数据
-3. action 描述当前如何操作 state 状态
-4. dispatch 更改当前 state 的唯一方法
+3. action 描述当前如何操作 state 状态，需要 type(区分对 state 的操作) 和 payload(传递的数据)
+4. dispatch 更改当前 state 的唯一方法，派发事件 action
 5. reducer 返回新 state 的唯一方法
 
     ```jsx

@@ -98,9 +98,11 @@ class Student extends Person{
 }
 ```
 
-### promise
+### [[协程|异步]]
 
-解决异步回调的问题。
+#### promise
+
+利用解决异步回调的问题。
 
 ```javascript
 new Promise((resolve, reject)=>{
@@ -117,5 +119,13 @@ new Promise((resolve, reject)=>{
     console.log("rejected")
 })
 ```
+
+除了 then 方法之外，promise 还有 catch  和 finally 两个方法用于捕获运行的错误
+
+#### async 和 await
+
+async 标记为异步函数，返回值是一个 promise 对象
+
+await 相当于 then 等待完成
 
 ## [[浏览器模型]]
