@@ -243,7 +243,7 @@ print(cutted.value_counts())
 
 1. `pivot_table`
 
-    有四个最重要的参数 index、values、aggfunc
+    有三个最重要的参数 index、values、aggfunc
 
     1. index
 
@@ -263,8 +263,18 @@ print(cutted.value_counts())
 
 2. `pivot`
 
+    仅仅是用来 reshape dataframe
+
     ```python
     df.pivot(index="row as", columns="column as", value="show what value")
+    ```
+
+3. `melt`
+
+    将二维的表转换成关系型数据库的格式，下面的代码保留了 keep 将 melt* 变成了一列
+
+    ```python
+    pd.melt(df, id_vars=['keep'], value_vars=['melt1', 'melt2'])
     ```
 
 #### `stack`

@@ -14,7 +14,7 @@ type(classname, (Father), {methods})
 
 对象由类创建，类及元类可以创建类
 
-### ``metaclass``
+### `metaclass`
 
 不使用 type 创建类，而是使用自定义的方法创建类，则在定义类时增加`metaclass=xxx`
 
