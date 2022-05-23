@@ -15,8 +15,8 @@ tags: CS
 - DECIMAL(m,n): 总共有 m 位数，小数点后有 n 位
 - VARCHAR(n): n 位 string
 - BLOB: 二进制资料
-- DATES: \`YYYY-MM-DD\` 日期
-- TIMESTAMP: \`YYYY-MM-DD HH:MM:SS\`
+- DATES: `YYYY-MM-DD` 日期
+- TIMESTAMP: `YYYY-MM-DD HH:MM:SS`
 
 ```sql
 CREATE TABLE student(
