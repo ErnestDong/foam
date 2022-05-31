@@ -511,3 +511,5 @@ sympy.integrate(x**2, x)
 sympy.integrate(x**2, (x,0,1))
 sympy.integrate(sympy.exp(-x**2), (x, -oo, oo))
 ```
+
+## [[scipy]]

@@ -3,4 +3,4 @@ tags: js
 ---
 # nodejs
 
-基于 V8 的 [[javascript]] runtime
+基于 V8 的 [[javascript]] runtime，在 package.json 里面增加 `type: module` 可以使用 es6 语法的 import/export，而不是 commonjs 的 `require`
