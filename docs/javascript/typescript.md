@@ -29,7 +29,7 @@ class person implements Person{
 
 ### generic
 
-like template in [[Cpp]]
+like template in [[cpp]]
 
 ```typescript
 function greeting<T>(name: T):T{
