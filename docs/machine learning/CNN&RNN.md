@@ -3,7 +3,7 @@ tags: DeepLearning
 ---
 # 经典算法
 
-CNN 和 RNN 现在很多用来作为神经网络的一层
+CNN 和 RNN 现在很多用来作为[[神经网络]]的一层
 
 ## CNN
 

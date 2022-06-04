@@ -1,12 +1,12 @@
 # vue
 
-与 [[react]] 作用类似的 [[javascript]] 框架，更像是写 html。此外，vue 数据双向绑定，而 react 则是单向数据流。
+与 [[react]] 作用类似的 [[javascript]] 框架，更像是写 html。此外，vue 数据双向绑定，而 [[react]] 则是单向数据流。
 
 ## vue 语法
 
 1. 模版(类似[[react]]的jsx) {{key}} 返回 js 中 `data()` 函数返回值，可以没有根标签
    1. 如果 `key` 是 html 标签会 raw 输出，需要是 `<span v-html="key"></span>`才能渲染
-   2. 标签内渲染运行 javascript 需要用 "" 包裹
+   2. 标签内渲染运行 [[javascript]] 需要用 "" 包裹
 2. 指令
    1. `v-if` 条件渲染，可以用 `v-else-if` `v-else`，写在标签内
    2. `v-for` 循环遍历，需要指定 `:key`

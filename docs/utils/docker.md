@@ -5,7 +5,7 @@ tags: cli
 
 `dockerd` 运行在主机上，并通过 `socket` 从客户端访问
 
-docker 有比虚拟机更少的抽象层、利用宿主机的内核，不用加载一个 Guest OS 所以更快
+docker 有比虚拟机更少的抽象层、利用宿主机的内核，不用加载一个 Guest [[OS]] 所以更快
 
 ## docker 命令
 
@@ -23,7 +23,7 @@ docker 有比虚拟机更少的抽象层、利用宿主机的内核，不用加�
 
 docker image 实际上是一层层文件系统构成的，不同 image 可以共用相同的基础层
 
-最底层是 bootfs ，包含 bootloader 和 kernel，所有 image 共用；而 rootfs 包含了典型 linux 系统中的其他文件。一个精简的 OS rootfs 可以非常小
+最底层是 bootfs ，包含 bootloader 和 kernel，所有 image 共用；而 rootfs 包含了典型 linux 系统中的其他文件。一个精简的 [[OS]] rootfs 可以非常小
 
 ### 分层
 

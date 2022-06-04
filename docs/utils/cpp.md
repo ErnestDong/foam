@@ -156,7 +156,7 @@ C++ 的标准模版库 STL 有 6 大类
 
 ### unordered container
 
-也是一种关联容器，是不定序的容器，[[哈希表]] 的 separate chaining 链接法实现
+也是一种关联容器，是不定序的容器，[[哈希表]] 的 separate chaining [[链接]]法实现
 
 ## 分配器
 
