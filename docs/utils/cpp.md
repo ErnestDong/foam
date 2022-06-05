@@ -1,7 +1,9 @@
 ---
 tags: CS
 ---
-# C/Cpp
+# Cpp
+
+[[C]] with class
 
 ## 面向对象
 
