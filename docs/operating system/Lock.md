@@ -1,0 +1,52 @@
+---
+tags: CS, CSAPP, OS
+bibliography: [../../reference.bib]
+---
+# Lock
+
+## 自旋锁 Spin Lock
+
+### 概念
+
+“自旋”可以理解为“自我旋转”，这里的“旋转”指“循环”，比如 while 循环或者 for 循环。“自旋”就是自己在这里不停地循环，直到目标达成。而不像普通的锁那样，如果获取不到锁就进入阻塞。 适合的场景是：
+
+- 即将获得锁的临界区几乎不“拥堵”的情况
+- 持有自旋锁时必须禁止执行流切换(因此只有操作系内核并发的短临界区可以用)
+
+### 缺点
+
+虽然避免了线程切换的开销，但是它在避免线程切换开销的同时也带来了新的开销
+
+- 原子指令需要共享变量触发缓存同步
+- 其他线程都在空转
+- 获得自旋锁的线程可能会被操作系统切出去
+
+### 原子指令
+
+x86 [[汇编]] 提供了原子指令 `xchg` 交换两个变量，所有想要得到资源的线程用自己的 `nope` 与 lock 做 `xchg`，这样只有一个线程获得了 `lock`，其他线程交换后还是 `nope`
+
+### Spin 锁的实现
+
+```c
+#include <assert.h>
+const int YES = 1;
+const int NOPE = 0;
+int table = YES;
+void lock() {
+retry:
+    int got = xchg(table, NOPE);
+    if (got == NOPE) {
+        goto retry;
+    }
+    assert(got == YES);
+}
+void unlock() { xchg(table, YES); }
+```
+
+## 互斥锁 Mutex
+
+把锁的实现放到操作系统里面，用 `syscall` 让操作系统来处理。上锁失败不再占用CPU，但即使上锁成功也需要调用操作系统内核
+
+## Futex：Fast Username muTexes
+
+上锁成功就用一条原子指令，而上锁失败执行 `syscall` 睡眠，[[C#pthread.h]] 中的 `pthread_mutex` 采用了这种做法[@drepper2005futexes]
