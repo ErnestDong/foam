@@ -18,13 +18,14 @@ firmware 和 boot loader共同完成操作系统的加载，初始化全局变�
 
 ## [[并发]]
 
-### [[并发#状态机模型]]
-
 ### [[Lock]] 与 [[Lock#死锁]]
 
 ### [[Synchronization]]
 
 ## 虚拟化
+
+操作系统从用户进程上看就是一组 syscall，libc/[[shell]] 都通过 syscall 访问 kernel。
+操作系统作为系统调用的管理者
 
 ### [[进程]]
 
@@ -32,4 +33,12 @@ firmware 和 boot loader共同完成操作系统的加载，初始化全局变�
 
 执行系统调用的“壳”，与内核交互
 
-## 持久化
+### [[C#libc 的实现]]
+
+kernel 外边就是 libc 和 ABI
+
+### TODO 上下文切换
+
+### TODO 处理器调度
+
+## TODO 持久化

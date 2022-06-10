@@ -14,6 +14,12 @@ tags: cli
 
 ## job control
 
+[[tmux]] 其实是建立了多个 tty，把信息转发给相应的 terminal，
+
+### [[tmux]]
+
+tty 给前台进程发信号，如果程序没有处理信号的机制执行默认的信号，
+
 ## shell script
 
 ### header/shebang
