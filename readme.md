@@ -13,7 +13,7 @@ formula [@eq:label] is introduced in @einstein1905electrodynamics
 ## TODOs
 
 - [ ] CSAPP
-- [ ] OS
-- [ ] Network
+- [x] OS
+- [x] Network
 - [ ] Database
 - [ ] Algorithm

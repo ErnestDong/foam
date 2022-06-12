@@ -16,8 +16,9 @@ tags: CS
   - 建立同步，不一定进行了传输
 - Transport
   - segmentation, flow control, error control
-  - send data
+  - send data(进程间的逻辑通信)
   - include TCP(connection-oriented) and UDP(connection-less)
+  - 只有主机才会有以上的层次，网络设备不会有
 - Network
   - use 'Packet'(source IP, Destination IP and Data), determine 'path'
   - logical addressing IP

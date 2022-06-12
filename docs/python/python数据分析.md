@@ -398,7 +398,7 @@ crash_df.head(3)
 sns.displot(crash_df["not_distracted"], bins=25)
 ```
 
-![img](../../attachments/.ob-jupyter/13bf166ce80d17d667e5d0036d51c9ddadd42935.png)
+![img](../../attachments/13bf166ce80d17d667e5d0036d51c9ddadd42935.png)
 
 #### `jointplot`
 
@@ -406,7 +406,7 @@ sns.displot(crash_df["not_distracted"], bins=25)
 sns.jointplot(x='speeding',y='alcohol', data=crash_df) # kind='reg','hex'
 ```
 
-![img](../../attachments/.ob-jupyter/4faf301a3bab28c89eada8447ca163cd1bd13bd0.png)
+![img](../../attachments/4faf301a3bab28c89eada8447ca163cd1bd13bd0.png)
 
 #### `kdeplot`
 
@@ -416,7 +416,7 @@ kde: 核密度估计
 sns.kdeplot(crash_df['alcohol'])
 ```
 
-![img](../../attachments/.ob-jupyter/b6a92abf3fe65bb743d1e4222880858dbdf26e9b.png)
+![img](../../attachments/b6a92abf3fe65bb743d1e4222880858dbdf26e9b.png)
 
 #### `pairplot`
 
@@ -424,7 +424,7 @@ sns.kdeplot(crash_df['alcohol'])
 sns.pairplot(crash_df)
 ```
 
-![img](.../../attachments/.ob-jupyter/3655b7ef5652f8695db4c4d3a1a2e7db11922dbd.png)
+![img](.../../attachments/3655b7ef5652f8695db4c4d3a1a2e7db11922dbd.png)
 
 #### `rugplot`
 
@@ -432,7 +432,7 @@ sns.pairplot(crash_df)
 sns.rugplot(crash_df["alcohol"])
 ```
 
-![img](../../attachments/.ob-jupyter/9b946f9e0d697f1e44f0b0d3aae216b18b4a679d.png)
+![img](../../attachments/9b946f9e0d697f1e44f0b0d3aae216b18b4a679d.png)
 
 #### others
 
@@ -449,7 +449,7 @@ sns.rugplot(crash_df["alcohol"])
 sns.jointplot(x='speeding',y='alcohol', data=crash_df, hue='abbrev') # kind='reg','hex'
 ```
 
-![img](../../attachments/.ob-jupyter/26f28eb7eb2f847f1292024700b06875ee455b80.png)
+![img](../../attachments/26f28eb7eb2f847f1292024700b06875ee455b80.png)
 
 ## sympy
 
@@ -466,7 +466,7 @@ sympy.oo  # ∞
 sympy.pi.evalf()
 ```
 
-![img](../../attachments/.ob-jupyter/c5dd39786026bbf667cd071f7b2b50a361beff7e.png)
+![img](../../attachments/c5dd39786026bbf667cd071f7b2b50a361beff7e.png)
 
 ### 代数运算与解方程
 
@@ -476,7 +476,7 @@ sympy.simplify((x + x*y) / x)
 sympy.solve([x**2-1, x+y],[x,y])
 ```
 
-![img](../../attachments/.ob-jupyter/bf61316bb3ede1c59f09cf65bf03c8a97b8936a6.png)
+![img](../../attachments/bf61316bb3ede1c59f09cf65bf03c8a97b8936a6.png)
 
 ### 微积分
 
@@ -486,7 +486,7 @@ sympy.solve([x**2-1, x+y],[x,y])
 sympy.limit(sympy.sin(x)/x, x, 0)
 ```
 
-![img](../../attachments/.ob-jupyter/f729e3248b9905b436afe214e9a14727f54bd306.png)
+![img](../../attachments/f729e3248b9905b436afe214e9a14727f54bd306.png)
 
 ### 微分
 
@@ -494,7 +494,7 @@ sympy.limit(sympy.sin(x)/x, x, 0)
 sympy.diff(sympy.sin(x), x)
 ```
 
-![img](../../attachments/.ob-jupyter/f55621042e29de0f11c5725cb8a8568a4ebce80b.png)
+![img](../../attachments/f55621042e29de0f11c5725cb8a8568a4ebce80b.png)
 
 Taylor 展开
 
@@ -502,7 +502,7 @@ Taylor 展开
 sympy.series(sympy.E**x,x)
 ```
 
-![img](../../attachments/.ob-jupyter/b651c9a9c50141a2e9a0d08e404d60f79e8d98e4.png)
+![img](../../attachments/b651c9a9c50141a2e9a0d08e404d60f79e8d98e4.png)
 
 ### 积分
 
