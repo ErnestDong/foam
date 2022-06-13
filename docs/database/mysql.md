@@ -7,7 +7,7 @@ tags: CS
 
 ### 数据类型
 
-表类似 excel 的一个 sheet
+表类似 excel 的一个 sheet，可以加 `temporary` 为session的临时表
 
 [[mysql]] 的数据形式有六种，分别是
 
@@ -95,11 +95,31 @@ FIELDS TERMINATED BY ","
 LINES TERMINATED BY "\n"
 ```
 
+### window functions
+
+- `ROW_NUMBER` 是当前行的行数，为窗口函数应用前计算
+- `RANK` 是排序后的当前行的顺序，为窗口函数应用后计算
+- `OVER` 语句为分组方式
+
+```sql
+SELECT cid, sid, ROW_NUMBER() OVER (PARTITION BY cid)
+FROM enrolled ORDER BY cid
+```
+
+### Common Table Expressions
+
+提供了一种在较大查询中为用户编写辅助语句的方法。可以被认为是一个范围仅限于单个查询的临时表
+
+```sql
+WITH cte1 (col1) AS (SELECT 1), cte2 (col2) AS (SELECT 2)
+SELECT * FROM cte1, cte2
+```
+
 ## [[数据库]]
 
-一个[[数据库]]中可以有多个 [Table]
+一个[[数据库]]中可以有多个 [[#Table]]
 
-不同的 Table 以[1.3.2]链接
+不同的 Table 以[[#外键 foreign key]]链接
 
 ### [[数据库]]的创建与删除
 
@@ -114,7 +134,7 @@ USE test;
 
 ### 外键 foreign key
 
-对应到某一张[Table]用 REFERENCES
+对应到某一张[[#Table]]用 REFERENCES
 
 ```sql
 CREATE TABLE scores(score INT PRIMARY KEY DEFAULT 0,
