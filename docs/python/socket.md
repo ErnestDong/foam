@@ -3,12 +3,14 @@ tags: python
 ---
 # socket 编程
 
-[[python]] 中内置 socket 模块，支持 socket 通信
+[[python]] 中内置 socket 模块，支持 socket 通信，socket 可以支持 TCP/UDP 连接
 
 ## 含义
 
 ```python
 s = socket.socket() # create socket
+udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(host, port) # bind to socket
 s.send()
 s.listen()
