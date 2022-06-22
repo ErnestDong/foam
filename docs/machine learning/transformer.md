@@ -1,11 +1,13 @@
 ---
 tags: DeepLearning
+bibliography: [../../reference.bib]
 ---
-# Attention
+# Transformer
 
 ## 原理
 
-$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V$ Q: Query，K: Key，V: Value，d 为归一化以稳定梯度
+$$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V$$
+Q: Query，K: Key，V: Value，d 为归一化以稳定梯度
 
 相关性大的， $\alpha$ 更大，对 `b` 的贡献更强
 
