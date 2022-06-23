@@ -17,6 +17,8 @@ Q: Query，K: Key，V: Value，d 为归一化以稳定梯度
 
 如果 attention 限定在较小的范围内（local attention），那么和 CNN 其实差不多。
 
+mask 机制是指产生输出的时候不能看后面的输入，方法是让后面的 key 定为很小的数，从而 softmax 之后接近于 0
+
 ## Self-Attention
 
 查找内部的关系，自身不同部分的 attention
