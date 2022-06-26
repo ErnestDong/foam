@@ -1,5 +1,5 @@
 ---
-tags: algorithm
+tags: algorithm,data_structure
 ---
 # 堆
 
