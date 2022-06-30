@@ -5,15 +5,18 @@ tags: python
 
 ## `collections`
 
-### `Counter`
+- `Counter`：是 dict 的子类，可以用来对 hashable 对象计数
+- `abc`：抽象基类
+- `defaultdict`：接受一个工厂函数，如果没有查询到 key 返回一个默认值
 
-是 dict 的子类，可以用来对 hashable 对象计数
-
-### `abc`
-
-抽象基类
-
-### TODO `default dict`
+```python
+from collections import defaultdict
+s = 'mississippi'
+d = defaultdict(int) # int() => 0
+for k in s:
+    d[k] += 1
+sorted(d.items()) # [('i', 4), ('m', 1), ('p', 2), ('s', 4)]
+```
 
 ## `logging`
 
