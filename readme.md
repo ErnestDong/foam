@@ -13,7 +13,6 @@ formula [@eq:label] is introduced in @einstein1905electrodynamics
 ## TODOs
 
 - [ ] CSAPP
-- [ ] 公司金融
 - [ ] 财务会计
 - [ ] Algorithm
 
