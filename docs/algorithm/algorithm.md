@@ -30,7 +30,9 @@ tags: algorithm
 
 ### [[摊还分析]]
 
-## TODO 第四版
+## 算法选编
+
+### TODO 第四版
 
 - [ ] 第25章二分图匹配(Matchings in Bipartite Graphs)、
 - [ ] 第27章在线算法(Online Algorithms)和
@@ -40,7 +42,7 @@ tags: algorithm
 [算法复杂度]: 算法复杂度.md "算法复杂度"
 [分治]: 分治.md "分治"
 [归并排序]: sort/归并排序.md "归并排序"
-[heap#堆排序]: data_structure/heap.md "堆"
+[堆#堆排序]: data_structure/堆.md "堆"
 [快速排序]: sort/快速排序.md "快速排序"
 [计数排序]: sort/计数排序.md "计数排序"
 [基数排序]: sort/基数排序.md "radix sort"
