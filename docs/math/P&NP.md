@@ -1,5 +1,5 @@
 ---
-tags: concrete algorithm,algorithm, math
+tags: algorithm, math
 ---
 # P&NP
 

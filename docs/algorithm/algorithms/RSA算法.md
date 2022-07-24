@@ -1,5 +1,5 @@
 ---
-tags: concrete algorithm,algorithm
+tags: algorithm
 ---
 # RSA算法
 

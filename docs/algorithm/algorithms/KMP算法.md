@@ -1,5 +1,5 @@
 ---
-tags: concrete algorithm,algorithm
+tags: algorithm
 ---
 # KMP算法
 
