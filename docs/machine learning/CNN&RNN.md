@@ -46,9 +46,8 @@ class CNN(nn.Module):
 
 ### 扩展
 
-1. ResNet
-
-    只有训练得好才走网络，否则不走
+1. AlexNet：
+2. ResNet：只有训练得好才走网络，否则不走
 
 ## RNN
 
