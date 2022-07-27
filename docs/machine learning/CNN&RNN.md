@@ -46,8 +46,8 @@ class CNN(nn.Module):
 
 ### 扩展
 
-1. AlexNet：
-2. ResNet：只有训练得好才走网络，否则不走
+1. AlexNet：CNN 开山之作，重点是防止过拟合
+2. ResNet：只有训练得好才走网络，否则不走。拟合残差函数 $h(x)-x$
 
 ## RNN
 
