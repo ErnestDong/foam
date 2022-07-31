@@ -1,5 +1,5 @@
 ---
-tags: CS, Cpp, cli
+tags: Cpp, cli
 ---
 # cmake
 

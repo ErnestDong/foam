@@ -1,5 +1,5 @@
 ---
-tags: CS, Cpp
+tags: Cpp
 ---
 # C
 

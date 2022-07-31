@@ -1,5 +1,5 @@
 ---
-tags: CS, CSAPP, OS
+tags: CSAPP, OS
 ---
 
 # Synchronization

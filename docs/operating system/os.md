@@ -1,5 +1,5 @@
 ---
-tags: CS, OS
+tags: OS
 ---
 
 # 操作系统

@@ -18,6 +18,8 @@ for k in s:
 sorted(d.items()) # [('i', 4), ('m', 1), ('p', 2), ('s', 4)]
 ```
 
+## [[pysocket]]
+
 ## `logging`
 
 ### example

@@ -1,5 +1,5 @@
 ---
-tags: CS, DB
+tags: DB
 ---
 # 存储设备
 

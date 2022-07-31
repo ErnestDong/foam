@@ -1,5 +1,5 @@
 ---
-tags: CS
+tags: DB
 ---
 # mysql
 
