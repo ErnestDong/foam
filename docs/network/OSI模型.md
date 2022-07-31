@@ -1,5 +1,5 @@
 ---
-tags: CS
+tags: network
 ---
 # OSI 模型
 

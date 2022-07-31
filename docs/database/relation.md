@@ -1,5 +1,5 @@
 ---
-tags: CS, DB
+tags: DB
 ---
 # 关系模型
 

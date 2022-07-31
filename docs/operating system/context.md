@@ -1,5 +1,5 @@
 ---
-tags: CS, OS
+tags: OS
 ---
 
 # 上下文切换
