@@ -37,27 +37,6 @@ class Comment:
 
 ## [[meta programming]]
 
-## GC
-
-python 引用计数为主，分代收集为辅，当引用数为 0 时清除。
-函数内循环引用，函数结束后无法释放内存。
-
-- 小整数[-5, 256]对象在解释器初始化时确定，相同的小整数是同一个 id
-- 大整数每次都会生成新的 id
-- 字符串驻留(intern)，相同的字符串指向相同的位置(字符串中不包含特殊字符)
-
-```python
-# 手动清除
-import gc
-def recur():
-    a = [i for i in range(100_0000_0000)]
-    b = [i for i in range(100_0000_0000)]
-    a.append(b)
-    b.append(a)
-recur()
-gc.collect()
-```
-
 ## 上下文管理器
 
 避免 IO 过程中出现错误没有释放资源
