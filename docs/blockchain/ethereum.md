@@ -17,7 +17,7 @@ tags: blockchain
 
 - [[smart contract]]
 - [[dapp]]
-- [[defi]]
+- [[DeFi]]
 - [[NFT]]
 
 ## ERC 标准
