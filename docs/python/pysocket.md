@@ -3,7 +3,7 @@ tags: python, network
 ---
 # socket 编程
 
-[[python]] 中内置 socket 模块，支持 socket 通信，socket 可以支持 TCP/UDP 连接
+[[python]] 中内置 socket 模块，支持 socket 通信，socket 可以支持 [[TCP]]/[[UDP]] 连接
 
 ## 含义
 
