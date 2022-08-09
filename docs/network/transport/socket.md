@@ -3,7 +3,9 @@ tags: CSAPP, network
 ---
 # socket
 
-一个 socket 是[[网络]]连接的一个端点。客户端使用 active socket，主动去寻找连接。socket 其实是一个四元组(IP_ME, PORT_ME, IP_YOU, PORT_YOU)，进程可以使用同样的端口
+一个 socket 是[[网络]]连接的一个端点。客户端使用 active socket，主动去寻找连接。socket 其实是一个四元组(IP_ME, PORT_ME, IP_YOU, PORT_YOU)
+
+进程可以使用同样的端口，套接字其实就是 [[IP]]+端口号
 
 ## socket 的 interface
 
