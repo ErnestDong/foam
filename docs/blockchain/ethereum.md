@@ -73,6 +73,7 @@ ERC-777 提出了一些改进，如 hooks 和定义更精确的 `demicals`
 [DeFi]: applications/DeFi.md "DeFi"
 [NFT]: applications/NFT.md "NFT"
 [DAO]: applications/DAO.md "DAO"
+[GameFi]: applications/GameFi.md "GameFi"
 [token|代币]: concept/token.md "token"
 [token]: concept/token.md "token"
 [数据库]: ../database/数据库.md "数据库"
