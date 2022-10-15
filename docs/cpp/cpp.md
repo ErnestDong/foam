@@ -101,7 +101,7 @@ int main() {
 
 ### 堆栈
 
-[[数据结构#栈]]是程序自动生成的，生命期在作用域内；static 对象在程序结束时生命期结束
+[[栈]]是程序自动生成的，生命期在作用域内；static 对象在程序结束时生命期结束
 
 [[堆]]是手动管理的，delete 之后指向对象生命期结束
 
@@ -150,7 +150,7 @@ int main() {
 [C]: C.md "C"
 [stl]: stl.md "STL"
 [compile]: ../compilers/compile.md "编译原理"
-[数据结构#栈]: ../algorithm/数据结构.md "数据结构"
+[栈]: ../algorithm/data_structure/栈.md "栈"
 [堆]: ../algorithm/data_structure/堆.md "堆"
 [多线程]: ../python/多线程.md "多线程"
 [Lock]: <../operating system/Lock.md> "Lock"
