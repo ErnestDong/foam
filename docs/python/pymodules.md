@@ -60,7 +60,7 @@ md5 = hashlib.md5(data.encode())
 result = md5.hexdigest()
 ```
 
-## TODO [[正则表达式]]
+## [[正则表达式]]
 
 ## [[单元测试]]
 
