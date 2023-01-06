@@ -1,5 +1,5 @@
 ---
-tags: Network
+tags: network
 ---
 # 广域网
 

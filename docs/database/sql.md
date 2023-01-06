@@ -332,7 +332,7 @@ session.close()
 [数据库]: 数据库.md "数据库"
 [#Table]: sql.md "mysql"
 [#外键 foreign key]: sql.md "mysql"
-[shell]: ../utils/shell.md "shell"
+[shell]: ../devops/shell.md "shell"
 [python]: ../python/python.md "python"
 [#ORM 模型]: sql.md "mysql"
 [处理器]: ../csapp/处理器.md "处理器体系结构"

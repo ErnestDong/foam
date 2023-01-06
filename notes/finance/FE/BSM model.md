@@ -1,5 +1,5 @@
 ---
-tags: 衍生品
+tags: derivatives
 ---
 # BSM 模型
 
