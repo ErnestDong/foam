@@ -1,11 +1,18 @@
 ---
-tags: cli
+tags: devops
 ---
 # docker
 
 `dockerd` 运行在主机上，并通过 `socket` 从客户端访问
 
 docker 有比虚拟机更少的抽象层、利用宿主机的内核，不用加载一个 Guest [[OS]] 所以更快
+
+## 原理
+
+linux 内核提供了一些功能，docker 利用这些功能来实现隔离
+
+- namespace 隔离进程，不同 namespace 之间的进程不可见
+- cgroups 隔离资源，限制 cpu 内存等资源的使用
 
 ## docker 命令
 

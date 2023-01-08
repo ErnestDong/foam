@@ -1,5 +1,5 @@
 ---
-tags: cli
+tags: devops, cli
 ---
 # shell
 
