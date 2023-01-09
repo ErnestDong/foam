@@ -1,5 +1,5 @@
 ---
-tags: DB
+tags: Database
 ---
 # logging
 
