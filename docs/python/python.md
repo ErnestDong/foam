@@ -13,29 +13,11 @@ tags: python
 - 3.8 `(x := read()) + 1`, `f'{x=}'`
 - 3.9 `string.removesuffix()`, `val: list[int] = []`, graphlib
 - 3.10 `with (A() as a, B() as b)`, [[#match]]
-
-### pathlib
-
-pathlib 重载了 `/` 运算符
-![pathlib](../../attachments/pathlib.png)
-
-### dataclass
-
-it will make the class comparable, (imuttable, hashable)
-
-```python
-from dataclasses import dataclass, field
-@dataclass(frozen=True) # hashable and imuttable
-class Comment:
-    id: int = field()
-    text: str = field(default="")
-```
+- 3.11 `except*`，`ExceptionGroup`
 
 ### match
 
 `match` like `switch` but with `break`, using `case`. case `_` matches all cases.
-
-## [[meta programming]]
 
 ## 上下文管理器
 
