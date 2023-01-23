@@ -60,7 +60,7 @@ kernel 外边就是 libc 和 ABI
 [Lock]: 并发/Lock.md "Lock"
 [Lock#死锁]: 并发/Lock.md "Lock"
 [Synchronization]: 并发/Synchronization.md "Synchronization"
-[shell]: ../devops/shell.md "shell"
+[shell]: ../tools/shell.md "shell"
 [进程]: 虚拟化/进程.md "进程"
 [C#libc 的实现]: ../cpp/C.md "C"
 [context]: 虚拟化/context.md "上下文切换"
