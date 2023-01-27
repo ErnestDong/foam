@@ -1,6 +1,7 @@
 ---
 tags: blockchain
 ---
+
 # NFT
 
 非同质化[[token|代币]]（NFT）用于以唯一的方式标识某人或者某物。所有 NFT 都有一个 uint256 变量，名为 tokenId。

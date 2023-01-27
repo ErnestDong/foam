@@ -9,7 +9,7 @@ tags: DeepLearning
 agent 的奖励是被延迟的，因而计算 return 时会给 reward 一个折现因子
 agent 有以下的组成：
 
-- **策略（policy）**  agent 会用策略来选取下一步的动作 action。
+- **策略（policy）** agent 会用策略来选取下一步的动作 action。
   - 是随机取样的(大多数情况)，也可以是取概率最大的(很少)
   - $\pi(a|s)=P(Action=a|State=s)$，s 状态下使用 action a 的概率，强化学习学的之一就是这个函数 ([[policy-network|policy-based-learning]])
 - **价值函数（value function）** 是对未来奖励的预测，用来评估状态的好坏。

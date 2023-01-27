@@ -2,6 +2,7 @@
 tags: DeepLearning
 bibliography: [../../reference.bib]
 ---
+
 # Swin
 
 将 [[ViT]] 像[[CNN]]一样，分几个 block 做层级式的特征提取，[[transformer]]是一个通用的骨干网络。
@@ -15,7 +16,7 @@ bibliography: [../../reference.bib]
 
 把临接的小 patch 组合为一个大 patch，类似 CNN 里面的 pooling
 
-把 $h \times w \times c$的 tensor分解为4个 $\frac{h}{2} \times \frac{w}{2} \times c$ 的 tensor，然后组合成 $\frac{h}{2} \times \frac{w}{2} \times 4c$，利用一个 1x1 的卷积核降维到 $\frac{h}{2} \times \frac{w}{2} \times 2c$，最后一层 global average pooling 变成 $1\times 1\times x$的向量
+把 $h \times w \times c$的 tensor 分解为 4 个 $\frac{h}{2} \times \frac{w}{2} \times c$ 的 tensor，然后组合成 $\frac{h}{2} \times \frac{w}{2} \times 4c$，利用一个 1x1 的卷积核降维到 $\frac{h}{2} \times \frac{w}{2} \times 2c$，最后一层 global average pooling 变成 $1\times 1\times x$的向量
 
 ## hierarchy
 

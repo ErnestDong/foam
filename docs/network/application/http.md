@@ -1,6 +1,7 @@
 ---
 tags: network
 ---
+
 # http
 
 http 分为持续连接和非持续连接，在 [[#http 报文]] 中采用`Connection: keep-alive/close`区分
@@ -34,12 +35,12 @@ http 分为持续连接和非持续连接，在 [[#http 报文]] 中采用`Conne
 - 101 Switching Protocols：从 http 转化为 websocket 协议等
 - 200 OK：请求已成功
 - 204 No Content：服务器成功处理了请求，没有返回任何内容
-- 301 Moved Permanently：被请求的资源已永久移动到新位置，并且将来任何对此资源的引用都应该使用本响应返回的若干个URI之一
+- 301 Moved Permanently：被请求的资源已永久移动到新位置，并且将来任何对此资源的引用都应该使用本响应返回的若干个 URI 之一
 - 302 Found：要求客户端执行临时重定向，客户端应当继续向原有地址发送以后的请求
-- 304 Not Modified：表示资源在由请求头中的If-Modified-Since或If-None-Match参数指定的这一版本之后，未曾被修改
+- 304 Not Modified：表示资源在由请求头中的 If-Modified-Since 或 If-None-Match 参数指定的这一版本之后，未曾被修改
 - 400 Bad Request：由于明显的客户端错误（例如，格式错误的请求语法，太大的大小，无效的请求消息或欺骗性路由请求），服务器不能或不会处理该请求
 - 401 Unauthorized：表示当前请求需要用户验证
-- 403 Forbidden：服务器已经理解请求，但是拒绝执行它。与401响应不同的是，身份验证并不能提供任何帮助，而且这个请求也不应该被重复提交
+- 403 Forbidden：服务器已经理解请求，但是拒绝执行它。与 401 响应不同的是，身份验证并不能提供任何帮助，而且这个请求也不应该被重复提交
 - 404 Not Found：请求失败，请求所希望得到的资源未被在服务器上发现，但允许用户的后续请求
 - 405 Method Not Allowed：请求行中指定的请求方法不能被用于请求相应的资源
 - 418 I'm a teapot

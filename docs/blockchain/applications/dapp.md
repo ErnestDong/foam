@@ -1,6 +1,7 @@
 ---
 tags: blockchain
 ---
+
 # DAPP
 
 去中心化应用是在去中心化网络上构建的应用程序，结合了[[smart contract]]和前端用户界面。

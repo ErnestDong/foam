@@ -1,6 +1,7 @@
 ---
 tags: cli
 ---
+
 # cl-lib
 
 CL 包为 elisp 提供了一系列的 Common Lisp 函数和控制结构，它添加了足够多的功能，使 elisp 编程变得更加方便。但是它也忽略了 Common Lisp 中许多其他的特性，这是出于两方面考虑：某些特性过于复杂，比如 CLOS；某些特性无法在不修改 elisp 解释器的情况下加入 elisp 中，比如大小写不敏感，多值返回等。
@@ -414,7 +415,7 @@ elisp 有一个叫做 `string-to-number` 的函数，功能与之相似，但提
 
 ### 随机函数
 
-elisp 中已经有了一个随机函数，叫做 `random` 。据文档所说，cl-random 的实现采用了 [addictive-congruential](https://en.wikipedia.org/wiki/ACORN_(PRNG)) 算法，可以产生比许多操作系统提供的生成器更好的随机数。
+elisp 中已经有了一个随机函数，叫做 `random` 。据文档所说，cl-random 的实现采用了 [addictive-congruential](<https://en.wikipedia.org/wiki/ACORN_(PRNG)>) 算法，可以产生比许多操作系统提供的生成器更好的随机数。
 
 `cl-random` 接受一个数字作为随机数的范围，并返回在该范围内的非负数字，如果这个数字是整数，那么随机数也是整数，如果是浮点数那么随机数也是浮点数。
 

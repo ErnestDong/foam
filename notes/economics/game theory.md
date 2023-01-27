@@ -1,6 +1,7 @@
 ---
 tags: master, game_theory
 ---
+
 # game theory
 
 ## 基本概念

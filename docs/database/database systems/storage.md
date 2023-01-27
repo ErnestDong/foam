@@ -1,6 +1,7 @@
 ---
 tags: Database
 ---
+
 # 存储设备
 
 ## [[OS]]视角下的[[计算机组成#文件系统]]
@@ -27,10 +28,10 @@ DBMS 把一个或多个文件划分为固定大小的 page，通常 1-16KB，存
 #### database [[堆]]
 
 堆文件组织找到 DBMS 想要的 page 在磁盘上的位置的方法之一。
-堆文件是以随机顺序存储 tuple 的 page 的无序集合。在给定页面ID的情况下，DBMS可以通过使用页面的链接列表或页面目录来定位磁盘上的页面。
+堆文件是以随机顺序存储 tuple 的 page 的无序集合。在给定页面 ID 的情况下，DBMS 可以通过使用页面的链接列表或页面目录来定位磁盘上的页面。
 
-- 链接列表：标题页包含指向自由页面列表和数据页面列表的指针。但是，如果DBMS正在查找特定的页，则它必须对数据页列表进行顺序扫描，直到找到它正在查找的页。
-- 页面目录：DBMS维护特殊页面，跟踪数据页面的位置以及每个页面上的空闲空间量
+- 链接列表：标题页包含指向自由页面列表和数据页面列表的指针。但是，如果 DBMS 正在查找特定的页，则它必须对数据页列表进行顺序扫描，直到找到它正在查找的页。
+- 页面目录：DBMS 维护特殊页面，跟踪数据页面的位置以及每个页面上的空闲空间量
 
 #### page layout
 
@@ -40,7 +41,7 @@ page 的内容并非直接在空处插入数据，因为会带来删除的麻烦
 
 - slotted pages：大多数 DBMS 使用
   - header 存储用到的 slots 数、最后一个用到的 slot 的位置与所有 tuple 的位置
-  - 要添加一个 tuple，slot数组将从头到尾增长，而 tuple 的数据将从头到尾增长。当 slot 数组和 tuple 数据相遇时，认为该页已满。
+  - 要添加一个 tuple，slot 数组将从头到尾增长，而 tuple 的数据将从头到尾增长。当 slot 数组和 tuple 数据相遇时，认为该页已满。
 - log-structured：只存储 log 记录
 
 #### tuple layout
@@ -68,7 +69,7 @@ tuple 是二进制序列，由 DBMS encode/decode。也分为 header 和数据�
 - Fixed-Point Precision Numbers：NUMERIC DECIMAL 。几乎等同于字符串，在 rounding error 不可忽略的时候使用，但影响性能
 - Variable-Length Data：VARCHAR VARBINARY TEXT BLOB。它们通常与字符串长度一起存储，以便于跳转到下一个值。它还可以包含数据的校验和。如果比较大，会储存在外部，内部保留一个指针，但因此无法做到 durability 或事务
 - Dates/Times：TIME，DATE，TIMESTAMP
-- System Catalogs：为了使 DBMS 能够解码 tuple 的内容，它维护一个有关数据库的元数据的内部目录。元数据将包含有关数据库具有哪些表和列的信息，以及它们的类型和值的排序。大多数DBMS以用于其表的格式将其目录存储在其内部。他们使用特殊代码来“引导”这些目录表。
+- System Catalogs：为了使 DBMS 能够解码 tuple 的内容，它维护一个有关数据库的元数据的内部目录。元数据将包含有关数据库具有哪些表和列的信息，以及它们的类型和值的排序。大多数 DBMS 以用于其表的格式将其目录存储在其内部。他们使用特殊代码来“引导”这些目录表。
 
 ## [[buffer_pools]]
 

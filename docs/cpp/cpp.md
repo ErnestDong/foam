@@ -1,6 +1,7 @@
 ---
 tags: Cpp
 ---
+
 # Cpp
 
 [[C]] with class & [[stl]]
@@ -9,7 +10,7 @@ tags: Cpp
 
 ### init
 
-类如果没有显式的声明以下六种函数，[[compile]]r会自动添加（需要的时候才添加），而且都不会被派生类继承：
+类如果没有显式的声明以下六种函数，[[compile]]r 会自动添加（需要的时候才添加），而且都不会被派生类继承：
 
 - 构造函数
 - 析构函数
@@ -111,7 +112,7 @@ new 先分配内存（内部调用 malloc），然后转型（static_cast），�
 
 delete 先调用析构函数，再释放内存（内部调用 free）
 
-new String[3] 一定要调用 delete[] *p 是因为这样才能调用多次析构函数
+new String[3] 一定要调用 delete[] \*p 是因为这样才能调用多次析构函数
 
 ### static
 

@@ -1,13 +1,14 @@
 ---
 tags: js
 ---
+
 # javascript
 
 ## == 和 ===
 
 ```js
-console.log(1=='1'); // true
-console.log(1==='1'); //false
+console.log(1 == "1"); // true
+console.log(1 === "1"); //false
 ```
 
 ## es6
@@ -30,14 +31,14 @@ console.log(arr.map(func));
 
 ```js
 let arr = [1, 2, 3, 5];
-console.log(arr.map((x) => (x*2)))
+console.log(arr.map((x) => x * 2));
 ```
 
 ### f-string
 
 ```js
-let name="ernest"
-console.log(`hello ${name}`)
+let name = "ernest";
+console.log(`hello ${name}`);
 ```
 
 ### 对象传播操作符
@@ -63,38 +64,42 @@ module.export{
 ```js
 /// es6
 // export
-export function myfunc(){};
+export function myfunc() {}
 // import
-import {myfunc} from "./myfunc";
+import { myfunc } from "./myfunc";
 ```
 
 ### iterator
 
 ```js
-let arr = [1, 2, 4]
-for(let i=0; i<3; i++){console.log(i)}
-for(let i of arr){console.log(i)}
+let arr = [1, 2, 4];
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+for (let i of arr) {
+  console.log(i);
+}
 ```
 
 ### [[OOP]]
 
 ```js
-class Person{
-    constructor(name){
-        this.name = name
-    };
-    hello(){
-        console.log(this.name)
-    }
-};
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  hello() {
+    console.log(this.name);
+  }
+}
 let me = new Person("I");
-console.log(me.hello())
+console.log(me.hello());
 
-class Student extends Person{
-    constructor(name, studentNum){
-        super(name);
-        this.studentNum = studentNum;
-    }
+class Student extends Person {
+  constructor(name, studentNum) {
+    super(name);
+    this.studentNum = studentNum;
+  }
 }
 ```
 
@@ -105,22 +110,25 @@ class Student extends Person{
 利用解决异步回调的问题。
 
 ```javascript
-new Promise((resolve, reject)=>{
-    console.log("try to resolve")
-    if (resolvable){
-        resolve()
-    }else{
-        reject()
-    }
-}).then(res=>{
-    console.log("resolved")
-    return 1
-}, err=>{
-    console.log("rejected")
-})
+new Promise((resolve, reject) => {
+  console.log("try to resolve");
+  if (resolvable) {
+    resolve();
+  } else {
+    reject();
+  }
+}).then(
+  (res) => {
+    console.log("resolved");
+    return 1;
+  },
+  (err) => {
+    console.log("rejected");
+  }
+);
 ```
 
-除了 then 方法之外，promise 还有 catch  和 finally 两个方法用于捕获运行的错误
+除了 then 方法之外，promise 还有 catch 和 finally 两个方法用于捕获运行的错误
 
 #### async 和 await
 

@@ -1,13 +1,14 @@
 ---
 tags: Cpp, cli
 ---
+
 # cmake
 
 modern [[make]] for [[cpp]]
 
 ## cmake 基本格式
 
-``` cmake
+```cmake
 cmake_minimum_required(VERSION 3.9)
 project(answer)
 

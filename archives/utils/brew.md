@@ -1,6 +1,7 @@
 ---
 tags: cli
 ---
+
 # homebrew
 
 In the [[shell]] I use `homebrew` as my package-manager
@@ -41,7 +42,7 @@ brew list --cask
 
 ### JAVAHOME
 
-<https://github.com/Homebrew/discussions/discussions/2530#discussioncomment-2002374> Installing Java-dependent formulae from bottle mirrors doesn't work properly at the moment. The issue is that brew needs the manifest in order to correctly replace @@HOMEBREW_{JAVA}@@ but brew only knows how to fetch manifests from ghcr.io.
+<https://github.com/Homebrew/discussions/discussions/2530#discussioncomment-2002374> Installing Java-dependent formulae from bottle mirrors doesn't work properly at the moment. The issue is that brew needs the manifest in order to correctly replace @@HOMEBREW\_{JAVA}@@ but brew only knows how to fetch manifests from ghcr.io.
 
 ### how to create brew taps
 

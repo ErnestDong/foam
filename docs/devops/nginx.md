@@ -1,25 +1,26 @@
 ---
 tags: devops
 ---
+
 # nginx
 
 ## 作用
 
 ### 反向代理
 
-当接入服务器的用户过多时，需要增加多台服务器，而Nginx负责代理这些服务器的接入，与[[网络]]中的VPN正向代理相反
+当接入服务器的用户过多时，需要增加多台服务器，而 Nginx 负责代理这些服务器的接入，与[[网络]]中的 VPN 正向代理相反
 
 ### 负载均衡
 
 轮流接入，给各个服务器分配接入的权重
 
-iphash，固定ip接入固定的服务器
+iphash，固定 ip 接入固定的服务器
 
 ### 动静分离
 
-静态资源和动态资源请求可以放到Nginx里
+静态资源和动态资源请求可以放到 Nginx 里
 
-## Nginx常用命令
+## Nginx 常用命令
 
 ```bash
 cd /usr/local/nginx/sbin/
@@ -33,7 +34,7 @@ cd /usr/local/nginx/sbin/
 ./nginx -s reload
 ```
 
-## Nginx配置文件
+## Nginx 配置文件
 
 ```nginx
 user www www;

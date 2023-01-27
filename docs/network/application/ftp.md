@@ -1,9 +1,10 @@
 ---
 tags: network
 ---
+
 # FTP
 
-可以把本地文件upload到服务器，或download服务器文件到本地。也是基于[[TCP]]的，协议需要支持
+可以把本地文件 upload 到服务器，或 download 服务器文件到本地。也是基于[[TCP]]的，协议需要支持
 
 - 用户认证：明文传输的
 - list 文件

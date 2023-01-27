@@ -1,6 +1,7 @@
 ---
 tags: python
 ---
+
 # `logging`
 
 [[python]]打日志，不阻塞、线程安全

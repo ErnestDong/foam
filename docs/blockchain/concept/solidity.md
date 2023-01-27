@@ -1,6 +1,7 @@
 ---
 tags: blockchain
 ---
+
 # solidity
 
 [WTF Solidity](https://github.com/AmazingAng/WTF-Solidity/)
@@ -8,7 +9,7 @@ tags: blockchain
 后缀名为 sol，第一行为版本号 `progma solidity >= 0.6.0 < 0.9.0;`。
 `msg` 是一个全局变量，包含了给定交易的相关数据，例如发送者的地址和包含在交易中的 ETH 数量。
 
-solidity数据存储位置有三类：`storage`，`memory`和`calldata`。不同存储位置的`gas`成本不同。`storage`类型的数据存在链上，类似计算机的硬盘，消耗`gas`多；`memory`和`calldata`类型的临时存在内存里，消耗`gas`少。大致用法：
+solidity 数据存储位置有三类：`storage`，`memory`和`calldata`。不同存储位置的`gas`成本不同。`storage`类型的数据存在链上，类似计算机的硬盘，消耗`gas`多；`memory`和`calldata`类型的临时存在内存里，消耗`gas`少。大致用法：
 
 1. `storage`：合约里的状态变量默认都是`storage`，存储在链上。
 2. `memory`：函数里的参数和临时变量一般用`memory`，存储在内存中，不上链。

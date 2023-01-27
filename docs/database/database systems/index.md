@@ -1,6 +1,7 @@
 ---
 tags: Database
 ---
+
 # 索引
 
 sql 优化很多是依靠索引。创建索引后，SELECT 、 ORDER BY 等会快很多
@@ -36,11 +37,11 @@ sql 优化很多是依靠索引。创建索引后，SELECT 、 ORDER BY 等会�
 
 1. 主键索引
 
-    只能有一个 PRIMARY
+   只能有一个 PRIMARY
 
 2. 唯一索引
 
-    可以有多个 UNIQUE
+   可以有多个 UNIQUE
 
 3. 常规索引
 

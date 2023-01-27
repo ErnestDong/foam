@@ -1,6 +1,7 @@
 ---
 tags: master
 ---
+
 # 经济学
 
 ## [[game theory]]

@@ -1,6 +1,7 @@
 ---
 tags: python
 ---
+
 # `collections`
 
 [[python]]内置的一些工具

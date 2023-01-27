@@ -1,6 +1,7 @@
 ---
 tags: Database
 ---
+
 # sql query
 
 ## query processing
@@ -9,7 +10,7 @@ DBMS 将[[sql]] 语句转换为查询计划。
 查询计划中的运算符排列在树中。
 数据从这棵树的叶子流向根部。
 树中根节点的输出是查询的结果。
-运算符是二元的(1-2个子运算符)，可以通过多种方式执行相同的查询计划
+运算符是二元的(1-2 个子运算符)，可以通过多种方式执行相同的查询计划
 
 ### processing model
 
@@ -22,12 +23,12 @@ row-based DBMS 使用，
 
 ![迭代模型](../../attachments/itermodel.png)
 
-每个操作符都实现了一个 `next` 函数，`next` 函数本质上是遍历其子运算符的输出的for循环。循环结束后发送一个 null pointer 告知父节点可以前进
+每个操作符都实现了一个 `next` 函数，`next` 函数本质上是遍历其子运算符的输出的 for 循环。循环结束后发送一个 null pointer 告知父节点可以前进
 
 #### Materialization model
 
 适合 OLTP，
-是特殊的 [[#Iteration model]]，每个操作符一次处理它的所有输入，然后一次输出它的所有输出。每个运算符在每次到达时都返回其所有元组，而不是让Next函数返回单个元组。
+是特殊的 [[#Iteration model]]，每个操作符一次处理它的所有输入，然后一次输出它的所有输出。每个运算符在每次到达时都返回其所有元组，而不是让 Next 函数返回单个元组。
 
 ![物化模型](../../attachments/materialmodel.png)
 

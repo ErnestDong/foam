@@ -1,6 +1,7 @@
 ---
 tags: DesignPattern
 ---
+
 # 面向对象
 
 ## 基本特征

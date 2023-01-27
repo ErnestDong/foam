@@ -1,6 +1,7 @@
 ---
 tags: devops, cli
 ---
+
 # shell
 
 把用户指令翻译成系统调用的实现
@@ -48,7 +49,7 @@ read -p "Enter your name" NAME
 
 #### operator
 
-| -gt        | &gt;           |
+| -gt | &gt; |
 | -and so on | \\\\ and so on |
 
 #### read only
