@@ -1,6 +1,7 @@
 ---
 tags: js
 ---
+
 # typescript
 
 ## 带类型注解的 [[javascript]]
@@ -16,14 +17,16 @@ like typing in python. support union
 不是 [[python]]的鸭子类型， interface 制定了需要满足什么条件
 
 ```typescript
-interface Person{
-    name: string;
-    age?: number; // optional
+interface Person {
+  name: string;
+  age?: number; // optional
 }
 
-class person implements Person{
-    constructor(name: string, age: number){}
-    greet(){console.log(this.name)}
+class person implements Person {
+  constructor(name: string, age: number) {}
+  greet() {
+    console.log(this.name);
+  }
 }
 ```
 
@@ -32,14 +35,14 @@ class person implements Person{
 like template in [[cpp]]
 
 ```typescript
-function greeting<T>(name: T):T{
-    return name
+function greeting<T>(name: T): T {
+  return name;
 }
 
-interface Book<T>{
-    id: string;
-    name: string;
-    data: T
+interface Book<T> {
+  id: string;
+  name: string;
+  data: T;
 }
 ```
 

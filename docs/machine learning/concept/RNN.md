@@ -1,6 +1,7 @@
 ---
 tags: DeepLearning
 ---
+
 # RNN
 
 ![RNN](../../attachments/rnn.png)

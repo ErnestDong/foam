@@ -1,6 +1,7 @@
 ---
 tags: blockchain
 ---
+
 # 零知识证明
 
 参与方分为 prover 和 verifier，prover 向 verifier 发送证明某命题的方法，特点是过程中除“该命题为真”之事外，不泄露任何资讯。是一个基于概率的验证方式，需要具备：
@@ -18,8 +19,8 @@ tags: blockchain
 
 - zero knowledge：零知识，即在证明的过程中不透露任何内情；
 - succinct：简洁的，主要是指验证过程不涉及大量数据传输以及验证算法简单；
-- non-interactive：无交互。Prover和Verifier之间不需要经过多次交互才能取得满意的可靠性。
-- Argument of Knowledge：知识论证，只有知道 secret 的prover，才能生成有效的proof；
+- non-interactive：无交互。Prover 和 Verifier 之间不需要经过多次交互才能取得满意的可靠性。
+- Argument of Knowledge：知识论证，只有知道 secret 的 prover，才能生成有效的 proof；
 
 ## zk-STARKs
 

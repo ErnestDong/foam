@@ -1,6 +1,7 @@
 ---
 tags: blockchain
 ---
+
 # 智能合约
 
 ## 概念

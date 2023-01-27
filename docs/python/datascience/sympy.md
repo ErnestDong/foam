@@ -1,6 +1,7 @@
 ---
 tags: python
 ---
+
 # sympy
 
 `sympy` 用于[[python]]符号计算

@@ -1,13 +1,14 @@
 ---
 tags: Database
 ---
+
 # mysql
 
 ## Table
 
 ### 数据类型
 
-表类似 excel 的一个 sheet，可以加 `temporary` 为session的临时表
+表类似 excel 的一个 sheet，可以加 `temporary` 为 session 的临时表
 
 [[mysql]] 的数据形式有六种，分别是
 
@@ -37,46 +38,46 @@ ALTER TABLE student ADD gpa DECIMAL(3,2); -- ADD can be DROP
 
 1. 增
 
-    ```sql
-    INSERT INTO student VALUES(1, '董晨阳', 'RMI', 4.00);
-    SELECT * FROM student;
-    INSERT INTO student(studentID, `name`, major, gpa) VALUES(1, '晨阳', 'RMI', NULL);
-    ```
+   ```sql
+   INSERT INTO student VALUES(1, '董晨阳', 'RMI', 4.00);
+   SELECT * FROM student;
+   INSERT INTO student(studentID, `name`, major, gpa) VALUES(1, '晨阳', 'RMI', NULL);
+   ```
 
-    1. 加入限制
+   1. 加入限制
 
-        ```sql
-        CREATE TABLE student(
-            studentID INT PRIMARY KEY,
-            `name` VARCHAR(20) UNIQUE,
-            major VARCHAR(20) NOT NULL,
-            gpa DECIMAL(3,2) DEFAULT 4.00
-        );
-        ```
+      ```sql
+      CREATE TABLE student(
+          studentID INT PRIMARY KEY,
+          `name` VARCHAR(20) UNIQUE,
+          major VARCHAR(20) NOT NULL,
+          gpa DECIMAL(3,2) DEFAULT 4.00
+      );
+      ```
 
-        其他如
+      其他如
 
-        - AUTO_{INCREMENT} 自动递增
+      - AUTO\_{INCREMENT} 自动递增
 
 2. 删
 
-    ```sql
-    DELETE FROM student WHERE gpa < 2.0
-    ```
+   ```sql
+   DELETE FROM student WHERE gpa < 2.0
+   ```
 
 3. 查
 
-    ```sql
-    SELECT `name`, studentID FROM student WHERE gpa < 3.70 ORDER BY gpa, studentID DESC;
-    ```
+   ```sql
+   SELECT `name`, studentID FROM student WHERE gpa < 3.70 ORDER BY gpa, studentID DESC;
+   ```
 
-    可以加 `LIMIT 3` 来限制传回来的数量
+   可以加 `LIMIT 3` 来限制传回来的数量
 
 4. 改
 
-    ```sql
-    UPDATE student SET major = "风险管理与保险", gpa = 4.00 WHERE major = "RMI" OR major IN("风保");
-    ```
+   ```sql
+   UPDATE student SET major = "风险管理与保险", gpa = 4.00 WHERE major = "RMI" OR major IN("风保");
+   ```
 
 ### 重命名 AS
 
@@ -149,21 +150,21 @@ ALTER TABLE students ADD FOREIGN KEY(studentID) REFERENCES scores(studentID) ON 
 
 1. 内连接
 
-    1. 等值连接
+   1. 等值连接
 
-        ```sql
-        select e.name, d.name from emp e join dept d on e.deptnum = d.deptnum
-        ```
+      ```sql
+      select e.name, d.name from emp e join dept d on e.deptnum = d.deptnum
+      ```
 
-    2. 非等值连接
+   2. 非等值连接
 
-    3. 自连接
+   3. 自连接
 
 2. 外连接
 
-    1. 左连接
+   1. 左连接
 
-    2. 右连接
+   2. 右连接
 
 3. 全连接
 
@@ -175,17 +176,17 @@ ALTER TABLE students ADD FOREIGN KEY(studentID) REFERENCES scores(studentID) ON 
 
 1. COUNT
 
-    ```sql
-    SELECT COUNT(gpa) FROM student;
-    ```
+   ```sql
+   SELECT COUNT(gpa) FROM student;
+   ```
 
 2. AVG
 
-    平均
+   平均
 
 3. SUM
 
-    总和
+   总和
 
 4. MAX & MIN
 
@@ -315,17 +316,17 @@ session.close()
 
 处理表的处理器
 
-| Engine               | Support | Comment                                                        | Transactions | XA   | Savepoints |
-| -------------------- | ------- | -------------------------------------------------------------- | ------------ | ---- | ---------- |
-| ARCHIVE              | YES     | Archive storage engine                                         | NO           | NO   | NO         |
-| BLACKHOLE            | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO   | NO         |
-| MRG_{MYISAM}         | YES     | Collection of identical MyISAM tables                          | NO           | NO   | NO         |
-| FEDERATED            | NO      | Federated MySQL storage engine                                 | null         | null | null       |
-| MyISAM               | YES     | MyISAM storage engine                                          | NO           | NO   | NO         |
-| PERFORMANCE_{SCHEMA} | YES     | Performance Schema                                             | NO           | NO   | NO         |
-| InnoDB               | DEFAULT | Supports transactions, row-level locking, and foreign keys     | YES          | YES  | YES        |
-| MEMORY               | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO   | NO         |
-| CSV                  | YES     | CSV storage engine                                             | NO           | NO   | NO         |
+| Engine                | Support | Comment                                                        | Transactions | XA   | Savepoints |
+| --------------------- | ------- | -------------------------------------------------------------- | ------------ | ---- | ---------- |
+| ARCHIVE               | YES     | Archive storage engine                                         | NO           | NO   | NO         |
+| BLACKHOLE             | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO   | NO         |
+| MRG\_{MYISAM}         | YES     | Collection of identical MyISAM tables                          | NO           | NO   | NO         |
+| FEDERATED             | NO      | Federated MySQL storage engine                                 | null         | null | null       |
+| MyISAM                | YES     | MyISAM storage engine                                          | NO           | NO   | NO         |
+| PERFORMANCE\_{SCHEMA} | YES     | Performance Schema                                             | NO           | NO   | NO         |
+| InnoDB                | DEFAULT | Supports transactions, row-level locking, and foreign keys     | YES          | YES  | YES        |
+| MEMORY                | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO   | NO         |
+| CSV                   | YES     | CSV storage engine                                             | NO           | NO   | NO         |
 
 [//begin]: # "Autogenerated link references for markdown compatibility"
 [mysql]: mysql.md "mysql"

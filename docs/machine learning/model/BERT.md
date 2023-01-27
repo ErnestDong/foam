@@ -2,6 +2,7 @@
 tags: DeepLearning
 bibliography: [../../reference.bib]
 ---
+
 # BERT
 
 是一个 [[transformer]] 的 Encoder 。随机 [[#mask]] 掉一些 token 输入到 Bert 中，将 [[#mask]] 的部分输出做全连接并 `softmax` ，最小化和 [[#mask]] 前的 cross entropy 。必须是一个大模型才能训练出来。

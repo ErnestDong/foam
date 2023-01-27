@@ -1,6 +1,7 @@
 ---
 tags: Database
 ---
+
 # Latch
 
 latch 有两种模式：
@@ -16,7 +17,7 @@ latch 有两种模式：
   - 由 DBMS 控制的 [[Lock#自旋锁 Spin Lock]]
   - not scalable nor cache-friendly
 - Reader-Writer Latch
-  - Latch 跟踪有多少线程分别在 read/write  模式下持有/等待 latch
+  - Latch 跟踪有多少线程分别在 read/write 模式下持有/等待 latch
 
 ## [[哈希表]] latching
 

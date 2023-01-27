@@ -1,6 +1,7 @@
 ---
 tags: Database
 ---
+
 # mysql
 
 ## [[sql]]
@@ -16,7 +17,7 @@ Join 可以被抽象为两个 `for` loop，里外两个迭代的表成为 inner/
     - 如果 DBMS 有 B 个 buffer 放数据，其中两个用来放 inner 和 outer table，复杂度降为 $M+MN/(B-2)$
   - 如果有每块有 C 个 tuple 的[[index]]，复杂度为 $M+mC$
 - Sort-Merge Join：先对两个表排序，然后合并，快于 Nested 方法
-- Hash Join：根据它们的联接属性将元组分割成更小的块，几乎总是比 sort-based  算法快，但当数据已经按连接键排序时，以及当结果需要排序时 sort-based 更快
+- Hash Join：根据它们的联接属性将元组分割成更小的块，几乎总是比 sort-based 算法快，但当数据已经按连接键排序时，以及当结果需要排序时 sort-based 更快
 
 ## 存储对象
 

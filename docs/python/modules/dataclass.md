@@ -1,6 +1,7 @@
 ---
 tags: python
 ---
+
 # dataclass
 
 让[[python]] class comparable, (imuttable, hashable)

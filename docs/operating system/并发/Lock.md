@@ -2,6 +2,7 @@
 tags: CSAPP, OS
 bibliography: [../../reference.bib]
 ---
+
 # Lock
 
 ## 自旋锁 Spin Lock
@@ -45,7 +46,7 @@ void unlock() { xchg(table, YES); }
 
 ## 互斥锁 Mutex
 
-把锁的实现放到操作系统里面，用 `syscall` 让操作系统来处理。上锁失败不再占用CPU，但即使上锁成功也需要调用操作系统内核
+把锁的实现放到操作系统里面，用 `syscall` 让操作系统来处理。上锁失败不再占用 CPU，但即使上锁成功也需要调用操作系统内核
 
 ## Futex：Fast Username muTexes
 

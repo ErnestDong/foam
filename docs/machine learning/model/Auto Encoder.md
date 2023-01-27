@@ -1,9 +1,10 @@
 ---
 tags: DeepLearning
 ---
+
 # Auto Encoder
 
-自编码器。encoder g 和 decoder f 来做最小化损失$L(x, f(g(x)))$，从而学习得到针对样本输入x的抽象特征表示z。
+自编码器。encoder g 和 decoder f 来做最小化损失$L(x, f(g(x)))$，从而学习得到针对样本输入 x 的抽象特征表示 z。
 
 ## Self-Supervised learning
 

@@ -1,6 +1,7 @@
 ---
 tags: Database
 ---
+
 # MVCC
 
 多版本并发控制 Multi-Version Concurrency Control
@@ -12,10 +13,10 @@ tags: Database
 
 ## 版本存储
 
-DBMS 使用 tuple 的指针为每个逻辑元组创建一个version chain，一个按时间戳排序的版本的 [[链表]]。
+DBMS 使用 tuple 的指针为每个逻辑元组创建一个 version chain，一个按时间戳排序的版本的 [[链表]]。
 
-- append only：每次更新只是将 tuple 的新版本附加到表中，并更新version chain
-- Time-Travel Storage：每次更新时重新创建一个新表，并更新version chain
+- append only：每次更新只是将 tuple 的新版本附加到表中，并更新 version chain
+- Time-Travel Storage：每次更新时重新创建一个新表，并更新 version chain
 - Delta Storage：每次更新的是差异，写快但读慢
 
 ## 垃圾回收

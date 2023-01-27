@@ -1,6 +1,7 @@
 ---
 tags: devops, cli
 ---
+
 # tmux
 
 Tmux 是一个终端复用器（terminal multiplexer），非常有用，属于常用的开发工具。

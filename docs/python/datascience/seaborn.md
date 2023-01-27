@@ -1,6 +1,7 @@
 ---
 tags: python
 ---
+
 # seaborn
 
 seaborn 是封装了[[matplotlib]] 的又一层接口，相较[[python]] matplotlib 默认更美观

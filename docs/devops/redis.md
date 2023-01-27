@@ -1,31 +1,32 @@
 ---
 tags: devops
 ---
+
 # redis
 
-作为一种Key-Value的No[[sql]]，常用做缓存、[[数据库]]、消息队列等，基于内存，性能高
+作为一种 Key-Value 的 No[[sql]]，常用做缓存、[[数据库]]、消息队列等，基于内存，性能高
 
 ## 使用方法
 
-查看key的值
+查看 key 的值
 
 ```redis
 get key
 ```
 
-查看key的过期时间
+查看 key 的过期时间
 
 ```redis
 ttl key
 ```
 
-设置key的过期时间
+设置 key 的过期时间
 
 ```redis
 expire key 10
 ```
 
-设置key的值
+设置 key 的值
 
 ```redis
 set key value [EX seconds] [PX milliseconds] [NX|XX]
@@ -39,8 +40,8 @@ set key value [EX seconds] [PX milliseconds] [NX|XX]
 
 ### 缓存穿透与缓存雪崩
 
-- 缓存穿透：查询一个不存在的key，导致每次都要去数据库查询，造成数据库压力过大
-- 缓存雪崩：缓存过期时间设置的过于集中，导致大量的key同时过期，造成数据库压力过大
+- 缓存穿透：查询一个不存在的 key，导致每次都要去数据库查询，造成数据库压力过大
+- 缓存雪崩：缓存过期时间设置的过于集中，导致大量的 key 同时过期，造成数据库压力过大
 
 解决方案：
 

@@ -1,13 +1,14 @@
 ---
 tags: rust
 ---
+
 # 迭代器
 
 在 Rust 中，迭代器是惰性的，意味着初始化(`vec.iter()`)后如果不使用它，那么它将不会发生任何事
 
-`next` 方法返回的是 `Option` 类型，当有值时返回 `Some(xxx)`，无值时返回 `None`
+`next`  方法返回的是  `Option`  类型，当有值时返回  `Some(xxx)`，无值时返回  `None`
 
-为自定义类型实现迭代器的方式是实现 `Iterator` [[trait]]
+为自定义类型实现迭代器的方式是实现  `Iterator` [[trait]]
 
 ```rust
 impl Iterator for Counter {

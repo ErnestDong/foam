@@ -12,9 +12,9 @@ tags: CSAPP, OS
 
 ### 条件变量 cv
 
- conditional variable
+conditional variable
 
- 把自旋变成睡眠，直到完成操作后唤醒。需要提供三个 API
+把自旋变成睡眠，直到完成操作后唤醒。需要提供三个 API
 
 - `wait(cv, mutex)`：释放掉 mutex 并且进入睡眠状态
 - `signal/notify(cv)`：如果有线程在等 cv，就唤醒其中一个
@@ -39,7 +39,7 @@ broadcast(&cv);
 
 限制在同一段序列中出现的线程数，接口为
 
-- `P` 是判断可进入的线程数 token 是否大于0，大于0就 token-1 ，等于 0 就加入等待序列
+- `P` 是判断可进入的线程数 token 是否大于 0，大于 0 就 token-1 ，等于 0 就加入等待序列
 - `V` 是释放 token ，让等待序列获得资源，或是使 token+1
 
 ```c

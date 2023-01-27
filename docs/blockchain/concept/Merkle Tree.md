@@ -1,6 +1,7 @@
 ---
 tags: blockchain, algorithm
 ---
+
 # Merkle Tree
 
 也叫 Hash Tree，一种[[树]]结构存储[[哈希表]]。叶子节点储存数据块的 hash，而非叶子节点存储子节点的 hash。

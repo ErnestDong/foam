@@ -1,6 +1,7 @@
 ---
 tags: derivatives
 ---
+
 # BSM 模型
 
 ## [[价格随机过程]]]]

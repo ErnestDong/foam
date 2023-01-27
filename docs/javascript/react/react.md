@@ -1,6 +1,7 @@
 ---
 tags: js
 ---
+
 # react
 
 ## virtual DOM & react
@@ -26,8 +27,8 @@ URL 和组件的映射关系，使用 [react router](https://github.com/remix-ru
 css 模块 filename.module.css 可以避免 css 重名，css 中原名字 cssname 成为了 style 中的方法
 
 ```jsx
-import style from "filename.module.css"
-style.cssname
+import style from "filename.module.css";
+style.cssname;
 ```
 
 ## [[typescript]]

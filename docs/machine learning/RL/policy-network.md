@@ -1,14 +1,17 @@
 ---
 tags: DeepLearning
 ---
+
 # policy-network
 
 想法是拟合出来一个策略函数$\pi(a|s;\theta)$，给定 state 可以给出 action 的概率分布，再从 action 中随机抽样出来
 
 state-value function 定义为
+
 $$
 V(s;\theta)=\sum_{a}\pi(a|s;\theta)Q_{\pi}(s,a)
 $$
+
 最大化 $J(\theta)=E_S(V(s;\theta))$
 
 ## policy gradient ascend
@@ -25,7 +28,7 @@ $$
 
 1. 观察 $s_t$
 2. 根据策略函数 $\pi$ 抽样 action $a$
-3. 计算$q_t=Q_\pi(s_t,a_t)$。不知道Q，解决方法为
+3. 计算$q_t=Q_\pi(s_t,a_t)$。不知道 Q，解决方法为
    1. reinforce：记录轨迹用 return u 计算 Q
    2. 用神经网络近似 $Q$，这个神经网络称为 critic，这种方法为 [[#actor-critic method]]
 4. 对策略网络求导 $d_{\theta,t}=\frac{\partial \log \pi}{\partial \theta}|_{\theta=\theta_t}$

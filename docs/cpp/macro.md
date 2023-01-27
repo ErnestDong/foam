@@ -1,6 +1,7 @@
 ---
 tags: Cpp
 ---
+
 # macro
 
 宏就是编译器在预处理阶段进行的**文本替换**，编译器(预处理器)对宏只进行简单的文本替换，而不会进行语法检查。 习惯上用大写字母表示 宏名
@@ -18,4 +19,4 @@ tags: Cpp
 
 - `#`符号把一个符号直接转换为字符串，比如`#define STR(x) #x`，`STR(abc)`会被替换为`"abc"`
 - `##`符号会连接两个符号，从而产生新的符号(词法层次)，比如`#define CONCAT(x, y) x##y`，`CONCAT(a, b)`会被替换为`ab`
-ANSI标准说明了五个预定义的宏名： `__LINE__`、`__FILE__`、`__DATE__`、`__TIME__`、`__TIMESTAMP__`、`__STDC__`、__cplusplus
+  ANSI 标准说明了五个预定义的宏名： `__LINE__`、`__FILE__`、`__DATE__`、`__TIME__`、`__TIMESTAMP__`、`__STDC__`、\_\_cplusplus

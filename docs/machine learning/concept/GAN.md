@@ -1,6 +1,7 @@
 ---
 tags: DeepLearning
 ---
+
 # GAN
 
 ## basic idea
