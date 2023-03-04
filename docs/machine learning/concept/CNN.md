@@ -45,3 +45,4 @@ class CNN(nn.Module):
 
 1. AlexNet：CNN 开山之作，重点是防止过拟合
 2. ResNet：只有训练得好才走网络，否则不走。拟合残差函数 $h(x)-x$
+3. 双流网络：两个 CNN 来做视频分类，一个 CNN 提取空间信息(图像帧的特征)，一个 CNN 提取动作信息(“光流”)，结果通过 late fusion 融合

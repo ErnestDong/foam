@@ -66,7 +66,6 @@ q 来自 decoder ，k 和 v 来自 encoder ，做 attention 作为 cross-attenti
 
 - [[BERT]]：预训练的带掩码的大模型，Encoder-only
 - [[GPT]]：预训练的大模型，Decoder-only
-- [[Pathways]]：“下一代 AI 框架”
 - [[ViT]]：transformer 在 CV 中的应用
 - [[Swin]]：移动窗口的 attention
 - [[CLIP]]：多模态学习
@@ -75,7 +74,7 @@ q 来自 decoder ，k 和 v 来自 encoder ，做 attention 作为 cross-attenti
 [神经网络]: 神经网络.md "神经网络"
 [bert]: ../model/BERT.md "BERT"
 [gpt]: ../model/GPT.md "GPT"
-[pathways]: ../model/Pathways.md "Pathways"
+[pathways]: ../inference/Pathways.md "Pathways"
 [vit]: ../model/ViT.md "ViT"
 [swin]: ../model/Swin.md "Swin"
 [clip]: ../model/CLIP.md "CLIP"
