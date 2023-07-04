@@ -24,7 +24,7 @@ gas 费用的多少取决于执行交易所需的算力和全网当时的算力�
 
 ## 以太坊账户
 
-![以太坊账户字段](../../attachments/eth%20account.png)
+![以太坊账户字段](../../../attachments/eth%20account.png)
 
 - `nonce` – 类似账户 ID
 - `balance` – 这个地址拥有的 Wei 数量。$1 ETH=1 \times 10^{18} Wei$。

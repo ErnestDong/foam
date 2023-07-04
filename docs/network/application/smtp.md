@@ -16,7 +16,7 @@ tags: network
 message 必须满足全部是 ASCII 码，所有内容编码在一个报文内。客户端像服务器发送指令，如 `HELO` `MAIL FROM` `RCPT TO` `DATA` `QUIT`
 
 与[[http]]类似，message 以 CRLF 结尾，但基本是一个 push protocol，发送者推向收件人；而非 http 的 pull protocol
-![push protocol](../../attachments/smtp.png)
+![push protocol](../../../attachments/smtp.png)
 
 接收方接收消息的方式可以为：
 

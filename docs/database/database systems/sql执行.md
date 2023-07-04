@@ -21,7 +21,7 @@ DBMS 执行 query 的方式，可以自顶而下或自底而上地执行
 row-based DBMS 使用，
 某些算子是会阻塞流水线的，比如`join`，`order by`，`subquery`。
 
-![迭代模型](../../attachments/itermodel.png)
+![迭代模型](../../../attachments/itermodel.png)
 
 每个操作符都实现了一个 `next` 函数，`next` 函数本质上是遍历其子运算符的输出的 for 循环。循环结束后发送一个 null pointer 告知父节点可以前进
 
@@ -30,14 +30,14 @@ row-based DBMS 使用，
 适合 OLTP，
 是特殊的 [[#Iteration model]]，每个操作符一次处理它的所有输入，然后一次输出它的所有输出。每个运算符在每次到达时都返回其所有元组，而不是让 Next 函数返回单个元组。
 
-![物化模型](../../attachments/materialmodel.png)
+![物化模型](../../../attachments/materialmodel.png)
 
 #### Victorized/Batch model
 
 适合 OLAP，并且容易被 SIMD 所向量化。
 类似[[#Iteration model]]但每次返回的是一个 batch
 
-![向量化模型](../../attachments/vectormodel.png)
+![向量化模型](../../../attachments/vectormodel.png)
 
 ### access model
 

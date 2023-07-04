@@ -4,7 +4,7 @@ tags: DeepLearning
 
 # RNN
 
-![RNN](../../attachments/rnn.png)
+![RNN](../../../attachments/rnn.png)
 
 很多被 [[transformer]] 取代，权值共享，有“记忆”功能。
 

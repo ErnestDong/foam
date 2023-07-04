@@ -13,7 +13,7 @@ bibliography: [../../reference.bib]
 MoCo 利用了`动量`的思想，用一个又大又一致的字典可以提高对比学习的效率，梯度反向传播的过程中更新方式为动量的方式 $\theta_t=m \theta_{t-1}+(1-m)\theta_q$，即会把新的数据放进去同时，旧的数据保留一个动量部分
 
 把一张图片利用“不同视角”分割成两个 augment，这里的 encoder 不是[[transformer]]的 encoder，而是类似 res-50 的一个编码网络
-![MoCo](../../attachments/MoCo.png)
+![MoCo](../../../attachments/MoCo.png)
 
 MoCo 在使用时可以是一种特征提取头
 

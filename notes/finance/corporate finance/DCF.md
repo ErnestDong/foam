@@ -14,9 +14,13 @@ tags: finance
 
 FCF 可以 to-firm，也可以 to-equity。搭模型通常采用 FCFF，然后减去债务价值估计股权价值
 
-- $FCFF=EBIT(1-t)+D\&A- Capex - \Delta NWC - \Delta Debt$
-- $FCFE=OCF - Capex - \Delta NWC$
-- $FCFF=FCFE+利息支出*（1-所得税税率）+净偿还$
+- $FCFF=EBIT(1-t)+D\&A- Capex - \Delta NWC$，要加回非现金费用，例如摊销、折旧和各项预提(坏帐准备、存货减值准备、汇兑损失准备等)
+- $FCFE=FCFF-利息支出*(1-t)+新增债务$
+
+> 为何主要采用 FCFF 而不是 FCFE？
+> 在财务管理领域关于企业融资的方式是否影响企业价值存在争论
+> 财务管理理论也指出股利分配策不应该影响价值而仅是起到向市场传递信号的作用
+> 避免在对某一个具体业务估值时需要将整个企业的融资成本依据某种假设分配到此业务
 
 ## WACC 的计算
 

@@ -6,7 +6,7 @@ tags: python
 
 scipy 是[[python]]的一个科学计算库，相关的工具封装在子模块中。使用时 `from scipy imports xxx`
 
-![scipy](../../attachments/scipy.png)
+![scipy](../../../attachments/scipy.png)
 
 ## integrate
 

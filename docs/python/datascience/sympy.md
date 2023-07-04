@@ -17,8 +17,6 @@ sympy.oo  # ∞
 sympy.pi.evalf()
 ```
 
-![img](../../attachments/c5dd39786026bbf667cd071f7b2b50a361beff7e.png)
-
 ## 代数运算与解方程
 
 ```python
@@ -26,8 +24,6 @@ sympy.expand((x + y)**3)
 sympy.simplify((x + x*y) / x)
 sympy.solve([x**2-1, x+y],[x,y])
 ```
-
-![img](../../attachments/bf61316bb3ede1c59f09cf65bf03c8a97b8936a6.png)
 
 ## 微积分
 
@@ -37,23 +33,17 @@ sympy.solve([x**2-1, x+y],[x,y])
 sympy.limit(sympy.sin(x)/x, x, 0)
 ```
 
-![img](../../attachments/f729e3248b9905b436afe214e9a14727f54bd306.png)
-
 ### 微分
 
 ```python
 sympy.diff(sympy.sin(x), x)
 ```
 
-![img](../../attachments/f55621042e29de0f11c5725cb8a8568a4ebce80b.png)
-
 Taylor 展开
 
 ```python
 sympy.series(sympy.E**x,x)
 ```
-
-![img](../../attachments/b651c9a9c50141a2e9a0d08e404d60f79e8d98e4.png)
 
 ### 积分
 
