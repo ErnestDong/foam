@@ -10,7 +10,7 @@ tags: Database
 
 表类似 excel 的一个 sheet，可以加 `temporary` 为 session 的临时表
 
-[[mysql]] 的数据形式有六种，分别是
+[[RDBMS]] 的数据形式有六种，分别是
 
 - INT:整数
 - DECIMAL(m,n): 总共有 m 位数，小数点后有 n 位
